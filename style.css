@@ -1,0 +1,83 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Map Styling */
+#map {
+    width: 60%;
+    height: 500px;
+    background-color: #ddd;
+    border: 2px solid #0073e6;
+}
+
+/* Spot Info Section */
+#spot-info {
+    width: 35%;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #0073e6;
+    border-radius: 8px;
+}
+
+#spot-details {
+    margin-bottom: 10px;
+}
+
+#add-favorite {
+    background-color: #0073e6;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#add-favorite:hover {
+    background-color: #005bb5;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #0073e6;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

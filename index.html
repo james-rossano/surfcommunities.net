@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>surfcommunity.net</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <h1>surfcommunity.net</h1>
+        <nav>
+            <a href="#">Login/Logout</a>
+            <a href="#">About</a>
+            <a href="#">Favorites</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="map"></div>
+        <div id="spot-info">
+            <h2>Click on a surf spot for more details</h2>
+            <div id="spot-details"></div>
+            <button id="add-favorite">Add to Favorites</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 surfcommunity.net All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</body>
+</html>

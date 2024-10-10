@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Santa Monica",
+        "lat": 34.0195,
+        "lng": -118.4912,
+        "forecast_url": "https://example.com/santamonica",
+        "community_url": "https://telegram.com/santamonica"
+    },
+    {
+        "name": "Malibu",
+        "lat": 34.0259,
+        "lng": -118.7798,
+        "forecast_url": "https://example.com/malibu",
+        "community_url": "https://telegram.com/malibu"
+    },
+    {
+        "name": "Venice Beach",
+        "lat": 33.9850,
+        "lng": -118.4695,
+        "forecast_url": "https://example.com/venicebeach",
+        "community_url": "https://telegram.com/venicebeach"
+    }
+]
