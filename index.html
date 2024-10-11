@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>surfcommunity.net</title>
-    
-    <!-- Include Mapbox GL JS CSS -->
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
-    
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="style.css" />
+    <title>surfcommunities.net</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 <body>
+    <header>
+        surfcommunities.net
+    </header>
 
     <div id="map"></div>
+
+    <footer>
+        &copy; 2024 surfcommunities.net. All rights reserved.
+    </footer>
+
     <div id="info-box" class="info-box">
-        <img id="spot-image" src="" alt="Surf Spot Image" class="info-image" />
+        <img id="spot-image" class="info-image" />
         <div id="spot-details"></div>
     </div>
 
-    <!-- Include Mapbox GL JS -->
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
-    
-    <!-- Link to the external JavaScript file -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="app.js"></script>
-
 </body>
 </html>
