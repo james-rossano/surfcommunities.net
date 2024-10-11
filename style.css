@@ -1,83 +1,61 @@
-/* Basic Reset */
-* {
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    height: 100%;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Header Styling */
-header {
-    background-color: #0073e6;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2rem;
-}
-
-header nav a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Main Layout */
-main {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-/* Map Styling */
 #map {
-    width: 60%;
-    height: 500px;
-    background-color: #ddd;
-    border: 2px solid #0073e6;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Spot Info Section */
-#spot-info {
-    width: 35%;
-    padding: 20px;
+/* More Details Box */
+.info-box {
+    position: absolute;
     background-color: white;
-    border: 2px solid #0073e6;
-    border-radius: 8px;
+    border: 2px solid white;
+    padding: 15px;
+    width: 300px;
+    border-radius: 10px;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-#spot-details {
+/* Adjust image size */
+.info-image {
+    width: 150px;
+    height: auto;
     margin-bottom: 10px;
-}
-
-#add-favorite {
-    background-color: #0073e6;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
     border-radius: 5px;
 }
 
-#add-favorite:hover {
-    background-color: #005bb5;
+/* Label Styling for Surf Spot Names (Popup) */
+.label {
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    padding: 5px 10px; /* Padding to fit the text */
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    text-align: center;
+    position: relative;
+    max-width: fit-content;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Slight shadow for contrast */
 }
 
-/* Footer Styling */
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #0073e6;
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+/* Blue Pin-like carrot underneath the label */
+.label::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Position the carrot below the label */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: white transparent transparent transparent; /* White carrot */
 }

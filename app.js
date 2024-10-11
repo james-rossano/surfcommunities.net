@@ -1,87 +1,87 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const spotDetails = document.getElementById('spot-details');
-    const addFavoriteBtn = document.getElementById('add-favorite');
+// Your Mapbox access token
+mapboxgl.accessToken = 'pk.eyJ1IjoiamFtZXNyb3NzYW5vIiwiYSI6ImNtMjUxMHZhbjBuNzIyam9yZG9tdW8zbW4ifQ.oCuK9g678_2HhPa8SNSDsw';
 
-    // Initialize Leaflet map
-    const map = L.map('map').setView([40.1795, -74.0327], 8); // Change the coordinates and zoom level as needed
+// Initialize the Mapbox map with a 3D globe projection
+const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/satellite-v9', // satellite style
+    center: [-74.0327, 40.1795], // starting position [lng, lat]
+    zoom: 3, // starting zoom level for a globe
+    projection: 'globe' // Use the globe projection for a 3D Earth effect
+});
 
-    const northNJCoords = [
-        [40.494945, -74.052420], // Example points for the North NJ region
-        [40.487518, -73.898210],
-        [39.981180, -73.983534],
-        [39.988310, -74.109678]
-    ];
-    
-    const southNJCoords = [
-        [39.055571, -75.147163], // Example points for the South NJ region
-        [39.867076, -74.211439],
-        [39.809305, -73.983598],
-        [38.797593, -74.923496]
-    ];
-    
-    // Create the polygon for the North NJ coast
-    const northNJPolygon = L.polygon(northNJCoords, {
-        color: '#0073e6',  // Border color
-        fillColor: '#0073e6',  // Fill color
-        fillOpacity: 0.4  // Semi-opaque fill
-    }).addTo(map);
-    
-    // Create the polygon for the South NJ coast
-    const southNJPolygon = L.polygon(southNJCoords, {
-        color: '#e67300',  // Border color
-        fillColor: '#e67300',  // Fill color
-        fillOpacity: 0.4  // Semi-opaque fill
-    }).addTo(map);
-
-    // Add OpenStreetMap tile layer
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    // Fetch surf spots from the local JSON file
-    fetch('/api/surfspots') // Call the API endpoint to get data from MongoDB
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(spot => {
-                // Create a circleMarker instead of a pin
-                const circle = L.circleMarker([spot.coordinates.lat, spot.coordinates.lng], {
-                    radius: 8, // Size of the circle
-                    color: '#0073e6', // Border color
-                    fillColor: '#0073e6', // Fill color
-                    fillOpacity: 0.8 // Opacity of the fill
-                }).addTo(map);
-
-                // Create a popup with the spot name
-                let popupContent = `<strong>${spot.name}</strong><br>`;
-
-                // Check if forecast is available
-                if (Array.isArray(spot.forecast) && spot.forecast.length > 0) {
-                    spot.forecast.forEach(f => {
-                        popupContent += `<a href="${f.url}" target="_blank">${f.name}</a><br>`;
-                    });
-                } else {
-                    popupContent += 'No forecast data available<br>';
-                    console.log(spot);
-                }
-
-                // Bind the popup content to the circle marker
-                circle.bindPopup(popupContent);
-            });
-        })
-        .catch(error => console.error('Error:', error));
-
-    // Function to display spot details
-    function showSpotInfo(spot) {
-        spotDetails.innerHTML = `
-            <h3>${spot.name}</h3>
-            <p>Latitude: ${spot.lat}, Longitude: ${spot.lng}</p>
-            <p><a href="${spot.forecast_url}" target="_blank">View Surf Forecast</a></p>
-            <p><a href="${spot.community_url}" target="_blank">Join Community</a></p>
-        `;
-    }
-
-    // Add to Favorites functionality
-    addFavoriteBtn.addEventListener('click', function () {
-        alert("Added to favorites!");
+// Enable globe terrain shading for better visualization
+map.on('style.load', () => {
+    map.setFog({
+        'range': [-1, 1.5],
+        'color': 'white',
+        'horizon-blend': 0.03
     });
 });
+
+// Fetch surf spots and display labels using Popups
+fetch('/api/surfspots')
+.then(response => response.json())
+.then(data => {
+    data.forEach(spot => {
+        // Check if the latitude and longitude are valid
+        if (!spot.coordinates || typeof spot.coordinates.lat !== 'number' || typeof spot.coordinates.lng !== 'number') {
+            console.error(`Invalid coordinates for ${spot.name}`);
+            return;
+        }
+
+        // Log the coordinates for debugging
+        console.log(`${spot.name} coordinates: `, spot.coordinates.lat, spot.coordinates.lng);
+
+        // Create a popup to act as the label
+        const popup = new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: false,
+            offset: 25 // Ensure popup doesn't overlap the marker
+        })
+        .setLngLat([spot.coordinates.lng, spot.coordinates.lat])
+        .setHTML(`<div class="label">${spot.name}</div>`)
+        .addTo(map);
+
+        // Add click event listener for each popup's label
+        popup.getElement().addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent map click event from hiding details box
+            showDetails(spot, popup.getLngLat()); // Pass the location of the clicked spot
+        });
+    });
+
+    function showDetails(spot, latLng) {
+        // Update the info box with the surf spot's details
+        const forecastLinks = spot.forecast.map(f => 
+            `<a href="${f.url}" target="_blank">${f.name}</a>`).join('<br>') || 'No forecast data available';
+
+        document.getElementById('spot-details').innerHTML = `
+            <strong>${spot.name}</strong><br>
+            ${spot.description || 'No description available'}<br>
+            ${forecastLinks}
+        `;
+
+        // Update the image
+        const spotImage = document.getElementById('spot-image');
+        spotImage.src = spot.image || '';
+        spotImage.style.display = spot.image ? 'block' : 'none';
+
+        // Position the info box near the clicked spot's location
+        const infoBox = document.getElementById('info-box');
+        const point = map.project(latLng); // Get the pixel coordinates of the marker
+        infoBox.style.display = 'block';
+        infoBox.style.top = `${point.y - 50}px`; // Adjust the Y offset
+        infoBox.style.left = `${point.x + 10}px`; // Adjust the X offset
+    }
+
+    // Hide the info box when clicking on the map (outside the surf spots)
+    map.on('click', () => {
+        document.getElementById('info-box').style.display = 'none';
+    });
+
+    // Hide the info box when dragging the map
+    map.on('dragstart', () => {
+        document.getElementById('info-box').style.display = 'none';
+    });
+})
+.catch(error => console.error('Error:', error));
