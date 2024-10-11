@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/james-rossano/surfcommunity.net#readme",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.7.1"
   }
 }

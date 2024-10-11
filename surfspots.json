@@ -1,23 +1,18 @@
 [
     {
-        "name": "Santa Monica",
-        "lat": 34.0195,
-        "lng": -118.4912,
-        "forecast_url": "https://example.com/santamonica",
-        "community_url": "https://telegram.com/santamonica"
-    },
-    {
-        "name": "Malibu",
-        "lat": 34.0259,
-        "lng": -118.7798,
-        "forecast_url": "https://example.com/malibu",
-        "community_url": "https://telegram.com/malibu"
-    },
-    {
-        "name": "Venice Beach",
-        "lat": 33.9850,
-        "lng": -118.4695,
-        "forecast_url": "https://example.com/venicebeach",
-        "community_url": "https://telegram.com/venicebeach"
+        "name": "Belmar",
+        "location": "Belmar, NJ",
+        "type": "Beach Break",
+        "description": "A popular surf spot known for its consistent waves and friendly surf community.",
+        "coordinates": {
+            "lat": 40.1795,
+            "lng": -74.0327
+        },
+        "image": "images/belmar.jpg",
+        "forecast": [
+            { "name": "Surfline", "url": "https://www.surfline.com/surf-report/belmar/4121" },
+            { "name": "Surf-Forecast", "url": "https://www.surf-forecast.com/breaks/Belmar" },
+            { "name": "Surf Captain", "url": "https://www.surf-captain.com/forecast/belmar" }
+        ]
     }
 ]
