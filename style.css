@@ -35,21 +35,32 @@ footer {
 .info-box {
     position: absolute;
     background-color: white;
-    padding: 10px;
-    border: 2px solid white;
-    border-radius: 10px;
-    width: 300px;
+    padding: 20px;
+    border: 2px solid black; /* Black border for better contrast */
+    border-radius: 15px;
+    width: 320px;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     display: none;
+    transition: transform 0.3s ease-out; /* Smooth appearance */
 }
 
 .info-image {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    max-height: 150px; /* Ensure images don't overflow */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
+.spot-details {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Label Styling for Surf Spot Names */
 .label {
     background-color: #0073e6;
     color: white;
@@ -58,10 +69,22 @@ footer {
     font-size: 12px;
     white-space: nowrap;
     text-align: center;
-    position: relative;
-    max-width: fit-content;
+    position: absolute;
+    transform: translate(-50%, -100%);
+    pointer-events: auto; /* Ensure the label is clickable */
+    cursor: pointer; /* Show pointer hand on hover */
+    border: 2px solid black; /* Black border to surround the blue box */
+    box-sizing: border-box; /* Ensures the padding and border fit within the box */
+    transition: background-color 0.3s ease; /* Smooth transition for color change */
 }
 
+/* Hover effect for the label */
+.label:hover {
+    background-color: #4da6ff; /* Lighter blue when hovered */
+}
+
+
+/* Blue Pin-like carrot underneath the label */
 .label::after {
     content: "";
     position: absolute;
@@ -71,4 +94,52 @@ footer {
     border-width: 6px;
     border-style: solid;
     border-color: #0073e6 transparent transparent transparent;
+}
+
+.forecast-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px;
+}
+
+button.forecast-btn {
+    padding: 10px;
+    background-color: #aaa; /* Grey buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.forecast-btn:hover {
+    background-color: #888; /* Darker grey on hover */
+}
+
+.descriptors p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.community-link {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.community-link:hover {
+    background-color: #005bb5;
 }
