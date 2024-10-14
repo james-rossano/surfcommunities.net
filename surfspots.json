@@ -1,47 +1,57 @@
 [
     {
+        "type": "Surf Spot",
         "name": "Belmar",
         "coordinates": {
             "lat": 40.176509, 
             "lng": -74.013332
         },
+        "country": "US",
+        "region": "Monmouth County, NJ",
         "forecast": [
             { "name": "Surfline", "url": "https://www.surfline.com/surf-report/belmar/4121" }
         ]
     },
 
     {
+        "type": "Surf Spot",
         "name": "Monmouth Beach",
         "coordinates": {
             "lat": 40.333483,
             "lng": -73.973231
         },
+        "country": "US",
+        "region": "Monmouth County, NJ",
         "forecast": [
-            { "name": "Surfline", "url": "https://www.surfline.com/surf-report/belmar/4121" },
-            { "name": "Surf-Forecast", "url": "https://www.surf-forecast.com/breaks/Belmar" }
+            { "name": "Surfline", "url": "https://www.surfline.com/surf-report/belmar/4121" }
         ]
     },
 
     {
+        "type": "Surf Spot",
         "name": "Sandy Hook",
         "coordinates": {
             "lat": 40.424758,
             "lng": -73.981309
         },
+        "country": "US",
+        "region": "Monmouth County, NJ",
         "forecast": [
             { "name": "Surfline", "url": "https://www.surfline.com/surf-report/belmar/4121" }
         ]
     },
 
     {
+        "type": "Surf Spot",
         "name": "Asbury Park",
         "coordinates": {
             "lat": 40.221544,
             "lng": -73.998764
         },
+        "country": "US",
+        "region": "Monmouth County, NJ",
         "forecast": [
             { "name": "Surfline", "url": "https://www.surfline.com/surf-report/belmar/4121" }
         ]
     }
 ]
-

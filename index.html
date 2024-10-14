@@ -14,6 +14,13 @@
 
     <div id="map"></div>
 
+    <!-- Search bar overlayed on the map -->
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Search for surf spots..." />
+        <div id="suggestions"></div>
+    </div>
+
+
     <footer>
         &copy; 2024 surfcommunities.net. All rights reserved.
     </footer>
@@ -23,6 +30,7 @@
         <div id="spot-details"></div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="app.js"></script>
 </body>
