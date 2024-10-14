@@ -7,35 +7,73 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 let surfSpots = [];
-const fuse = new Fuse(surfSpots, { keys: ['name'], threshold: 0.4 });
+const markers = [];
+const labels = [];
 
-
-// Fetch surf spots and initialize markers
+// Fetch surf spots and initialize both markers and labels
 fetch('/api/surfspots')
     .then(response => response.json())
     .then(data => {
         surfSpots = data; // Store surf spots for searching
         data.forEach(spot => {
-            const labelHtml = `<div class="label">${spot.name}</div>`;
+            // Create circle markers (for zoomed out view)
+            const marker = L.circleMarker([spot.coordinates.lat, spot.coordinates.lng], {
+                radius: 8,
+                fillColor: '#0073e6',
+                color: '#0073e6',
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 0.8
+            }).on('click', () => showDetails(spot, [spot.coordinates.lat, spot.coordinates.lng]));
 
+            markers.push(marker);
+
+            // Create labels (for zoomed in view)
+            const labelHtml = `<div class="label">${spot.name}</div>`;
             const label = L.marker([spot.coordinates.lat, spot.coordinates.lng], {
                 icon: L.divIcon({
                     className: 'label-icon',
                     html: labelHtml
                 })
-            }).addTo(map);
+            }).on('click', () => showDetails(spot, [spot.coordinates.lat, spot.coordinates.lng]));
 
-            label.on('click', function () {
-                showDetails(spot, [spot.coordinates.lat, spot.coordinates.lng]);
+            // Add hover behavior to bring label to front
+            label.on('mouseover', function () {
+                this.setZIndexOffset(1000); // Bring to front
             });
+            label.on('mouseout', function () {
+                this.setZIndexOffset(0); // Reset to default
+            });
+
+            labels.push(label);
         });
+
+        toggleMarkersAndLabels(); // Initialize the correct view based on zoom level
     })
     .catch(error => console.error('Error fetching surf spots:', error));
+
+// Function to toggle between markers and labels based on zoom level
+function toggleMarkersAndLabels() {
+    const zoomLevel = map.getZoom();
+
+    if (zoomLevel < 10) {
+        // Zoomed out: Show circle markers, hide labels
+        markers.forEach(marker => marker.addTo(map));
+        labels.forEach(label => map.removeLayer(label));
+    } else {
+        // Zoomed in: Show labels, hide circle markers
+        labels.forEach(label => label.addTo(map));
+        markers.forEach(marker => map.removeLayer(marker));
+    }
+}
+
+// Set up the zoom event listener to toggle markers and labels dynamically
+map.on('zoomend', toggleMarkersAndLabels);
 
 // Function to display surf spot details in the info box
 function showDetails(spot, latLng) {
     const forecastLinks = spot.forecast
-        .map(f => `<button class="forecast-btn" onclick="window.open('${f.url}', '_blank')">${f.name} Forecast</button>`)
+        .map(f => `<button class="forecast-btn" onclick="window.open('${f.url}', '_blank')">${f.name}</button>`)
         .join('') || 'No forecast data available';
 
     document.getElementById('spot-details').innerHTML = `
@@ -46,7 +84,7 @@ function showDetails(spot, latLng) {
         <div class="forecast-container">
             ${forecastLinks}
             <button class="forecast-btn" onclick="window.open('https://www.windy.com/-Waves-waves?waves,${spot.coordinates.lat},${spot.coordinates.lng},10', '_blank')">
-                Windy Forecast
+                Windy
             </button>
         </div>
         <div class="descriptors">
@@ -61,18 +99,16 @@ function showDetails(spot, latLng) {
     `;
 
     const spotImage = document.getElementById('spot-image');
-
-    // Check if the spot has an image; otherwise, use the fallback
     if (spot.image) {
         spotImage.src = spot.image;
         spotImage.style.display = 'block';
     } else {
         spotImage.src = 'images/test.jpg';
-        spotImage.style.display = 'block'; // Ensure it is displayed
+        spotImage.style.display = 'block';
     }
 
     const infoBox = document.getElementById('info-box');
-    const point = map.latLngToContainerPoint(latLng); // Get pixel coordinates
+    const point = map.latLngToContainerPoint(latLng);
     infoBox.style.display = 'block';
 
     const infoBoxHeight = infoBox.offsetHeight;
@@ -138,12 +174,6 @@ document.getElementById('search-input').addEventListener('input', function (e) {
 });
 
 // Hide the info box when clicking, dragging, or zooming the map
-map.on('click', () => {
-    document.getElementById('info-box').style.display = 'none';
-});
-map.on('drag', () => {
-    document.getElementById('info-box').style.display = 'none';
-});
-map.on('zoomend', () => {
-    document.getElementById('info-box').style.display = 'none';
-});
+map.on('click', () => document.getElementById('info-box').style.display = 'none');
+map.on('drag', () => document.getElementById('info-box').style.display = 'none');
+map.on('zoomend', () => document.getElementById('info-box').style.display = 'none');
