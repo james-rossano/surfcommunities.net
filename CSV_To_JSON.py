@@ -2,7 +2,7 @@ import pandas as pd
 import json
 
 # Load the CSV file
-csv_path = "spots.csv"  # Adjust path if necessary
+csv_path = "surf_spots/new_jersey_spots.csv"  # Adjust path if necessary
 df = pd.read_csv(csv_path)
 
 # Function to extract latitude and longitude from the "Location" column
