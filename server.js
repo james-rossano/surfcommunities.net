@@ -1,23 +1,37 @@
+require('dotenv').config(); // Load environment variables
 const express = require('express');
 const mongoose = require('mongoose');
+const rateLimit = require('express-rate-limit'); // Import rate limiter
 const SurfSpot = require('./models/surfspot'); // Import the Mongoose model
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+
+// Set up rate limiter: 100 requests per 15 minutes per IP
+const apiLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 200, // Limit each IP to 100 requests per windowMs
+    message: 'Too many requests from this IP, please try again later.',
+});
+
+// Apply rate limiter to all API endpoints
+app.use('/api', apiLimiter); // Limits access to /api/* routes
 
 // Connect to MongoDB Atlas
-mongoose.connect('mongodb+srv://jrossano4:12345@surfcommunity-cluster.gi10z.mongodb.net/?retryWrites=true&w=majority&appName=surfcommunity-cluster')
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('Connected to MongoDB Atlas'))
     .catch(err => console.error('Error connecting to MongoDB:', err));
 
-// Serve static files
-app.use(express.static(__dirname));
+// Serve static files with cache-control
+app.use(express.static(__dirname, {
+    maxAge: '1d', // Cache for one day
+}));
 
 // API endpoint to fetch surf spots from MongoDB
 app.get('/api/surfspots', async (req, res) => {
     try {
-        const surfSpots = await SurfSpot.find(); // Fetch from MongoDB
-        res.json(surfSpots); // Send data as JSON
+        const surfSpots = await SurfSpot.find();
+        res.json(surfSpots);
     } catch (err) {
         res.status(500).send('Error fetching surf spots');
     }
@@ -27,4 +41,6 @@ app.get('/api/surfspots', async (req, res) => {
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
+
+
 
