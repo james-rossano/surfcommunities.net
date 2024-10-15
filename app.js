@@ -38,8 +38,8 @@ function updateMarkers() {
             // Show circle markers for lower zoom levels
             const marker = L.circleMarker([spot.coordinates.lat, spot.coordinates.lng], {
                 radius: 8,
-                fillColor: '#0073e6',
-                color: '#0073e6',
+                fillColor: '#0E49B5',
+                color: '#0E49B5',
                 weight: 1,
                 opacity: 1,
                 fillOpacity: 0.8
@@ -81,12 +81,7 @@ function showDetails(spot, latLng) {
         <div class="forecast-container">
             ${forecastLinks}
         </div>
-        <div class="descriptors">
-            <p>&#127909; Share Photos and Video</p>
-            <p>&#127940; Find Where Conditions Are Best</p>
-            <p>&#128513; Meet Friends</p>
-            <p>&#128198; Share Advice Discuss Forecasts</p>
-        </div>
+        
         <a href="https://t.me/${spot.name.replace(/\s+/g, '')}_surfcommunity" target="_blank" class="community-link">
             Join ${spot.name} Community
         </a>

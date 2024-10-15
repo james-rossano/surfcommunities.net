@@ -5,23 +5,13 @@ import json
 csv_path = "surf_spots/new_jersey_spots.csv"  # Adjust path if necessary
 df = pd.read_csv(csv_path)
 
-# Function to extract latitude and longitude from the "Location" column
-def get_coordinates(location):
-    if pd.notna(location):
-        try:
-            lat, lng = map(float, location.split(", "))
-            return {"lat": lat, "lng": lng}
-        except ValueError:
-            print(f"Invalid coordinates: {location}")
-            return {"lat": None, "lng": None}
-    else:
-        return {"lat": None, "lng": None}
-
 # Convert the DataFrame to JSON format based on your desired structure
 spots_json = df.apply(lambda row: {
     "type": row["Type"].strip() if pd.notna(row["Type"]) else "Surf Spot",
     "name": row["Name"].strip() if pd.notna(row["Name"]) else None,
-    "coordinates": get_coordinates(row["Location"]),
+    "coordinates": {row["Name"].strip() if pd.notna(row["Latitude"]) else None,
+        row["Name"].strip() if pd.notna(row["Longitude"]) else None
+    }
     "country": row["Country"].strip() if pd.notna(row["Country"]) else None,
     "region": row["Region"].strip() if pd.notna(row["Region"]) else None,
     "sub_region": row["Sub-Region"].strip() if pd.notna(row["Sub-Region"]) else None,

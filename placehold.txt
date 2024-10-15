@@ -19,3 +19,10 @@ document.getElementById('spot-details').innerHTML = `
             Join ${spot.name} Community
         </a>
     `;
+
+<div class="descriptors">
+            <p>&#127909; Share Photos and Video</p>
+            <p>&#127940; Find Where Conditions Are Best</p>
+            <p>&#128513; Meet Friends</p>
+            <p>&#128198; Share Advice Discuss Forecasts</p>
+        </div>

@@ -9,7 +9,7 @@ html, body {
 }
 
 header {
-    background-color: #0073e6;
+    background-color: #06065D;
     color: white;
     text-align: center;
     padding: 10px;
@@ -61,7 +61,7 @@ footer {
 
 /* Label Styling for Surf Spot Names */
 .label {
-    background-color: #0073e6;
+    background-color: #0E49B5;
     color: white;
     padding: 4px 8px;
     border-radius: 5px;
@@ -72,14 +72,13 @@ footer {
     transform: translate(-50%, -100%);
     pointer-events: auto; /* Ensure the label is clickable */
     cursor: pointer; /* Show pointer hand on hover */
-    border: 2px solid white; /* Black border to surround the blue box */
     box-sizing: border-box; /* Ensures the padding and border fit within the box */
     transition: background-color 0.3s ease; /* Smooth transition for color change */
 }
 
 /* Hover effect for the label */
 .label:hover {
-    background-color: #4da6ff; /* Lighter blue when hovered */
+    background-color: #06065D; /* Lighter blue when hovered */
 }
 
 /* Blue Pin-like carrot underneath the label */
@@ -91,7 +90,7 @@ footer {
     transform: translateX(-50%);
     border-width: 6px;
     border-style: solid;
-    border-color: #0073e6 transparent transparent transparent;
+    border-color: #0E49B5 transparent transparent transparent;
 }
 
 .label-icon {
@@ -117,6 +116,7 @@ button.forecast-btn {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: underline;
     transition: background-color 0.3s ease;
 }
 
@@ -137,7 +137,7 @@ button.forecast-btn:hover {
     display: block;
     margin-top: 10px;
     padding: 10px;
-    background-color: #0073e6;
+    background-color: #ED0101;
     color: white;
     text-align: center;
     font-size: 16px;
@@ -148,7 +148,7 @@ button.forecast-btn:hover {
 }
 
 .community-link:hover {
-    background-color: #005bb5;
+    background-color: #A70107;
 }
 
 #search-container {
@@ -197,7 +197,7 @@ button.forecast-btn:hover {
 }
 
 .spot-label div {
-    background-color: #0073e6;
+    background-color: #06065D;
     color: white;
     padding: 2px 6px;
     border-radius: 4px;
