@@ -69,6 +69,12 @@ map.on('moveend', updateMarkers);
 
 // Function to display surf spot details in the info box
 function showDetails(spot, latLng) {
+    const infoBox = document.getElementById('info-box');
+
+    // Temporarily show the info box to get its dimensions
+    infoBox.style.display = 'block';
+    infoBox.style.visibility = 'hidden'; // Prevent flicker while positioning
+
     const forecastLinks = spot.forecast
         .map(f => `<button class="forecast-btn" onclick="window.open('${f.url}', '_blank')">${f.name}</button>`)
         .join('') || 'No forecast data available';
@@ -76,14 +82,13 @@ function showDetails(spot, latLng) {
     document.getElementById('spot-details').innerHTML = `
         <div class="spot-details">
             <strong>${spot.name}</strong><br>
-            ${spot.description || ''}
         </div>
         <div class="forecast-container">
             ${forecastLinks}
         </div>
         
         <a href="https://t.me/${spot.name.replace(/\s+/g, '')}_surfcommunity" target="_blank" class="community-link">
-            Join ${spot.name} Community
+            Join Community
         </a>
     `;
 
@@ -91,25 +96,41 @@ function showDetails(spot, latLng) {
     spotImage.src = spot.image || 'images/test.jpg';
     spotImage.style.display = 'block';
 
-    const infoBox = document.getElementById('info-box');
+    // Get map container and click point relative to the screen
+    const container = map.getContainer().getBoundingClientRect();
     const point = map.latLngToContainerPoint(latLng);
-    infoBox.style.display = 'block';
 
-    let topPos = point.y - 50;
-    let leftPos = point.x + 10;
+    // Calculate the initial position (bottom-right of the click point)
+    let topPos = (point.y + container.top) - 100; // Slight offset below the click
+    let leftPos = point.x + container.left + 10; // Slight offset to the right of the click
 
+    // Get the size of the info box
     const infoBoxHeight = infoBox.offsetHeight;
     const infoBoxWidth = infoBox.offsetWidth;
 
-    if ((topPos + infoBoxHeight) > window.innerHeight) {
-        topPos = window.innerHeight - infoBoxHeight - 20;
-    }
-    if ((leftPos + infoBoxWidth) > window.innerWidth) {
-        leftPos = window.innerWidth - infoBoxWidth - 20;
+    // Ensure the box doesn't overlap the footer
+    const footerHeight = document.querySelector('footer').offsetHeight;
+    if (topPos + infoBoxHeight > window.innerHeight - footerHeight) {
+        topPos = window.innerHeight - footerHeight - infoBoxHeight - 10;
     }
 
+    // Ensure the box stays within the map's left and right boundaries
+    const mapLeft = container.left;
+    const mapRight = container.right;
+    if (leftPos + infoBoxWidth > mapRight) {
+        leftPos = mapRight - infoBoxWidth - 10; // Adjust to stay within the right boundary
+    }
+    if (leftPos < mapLeft) {
+        leftPos = mapLeft + 10; // Adjust to stay within the left boundary
+    }
+
+    // Ensure the box doesn't overflow at the top of the screen
+    topPos = Math.max(10, topPos);
+
+    // Apply the calculated position and make the box visible
     infoBox.style.top = `${topPos}px`;
     infoBox.style.left = `${leftPos}px`;
+    infoBox.style.visibility = 'visible';
 }
 
 // Search for surf spots by name and display suggestions

@@ -26,3 +26,5 @@ document.getElementById('spot-details').innerHTML = `
             <p>&#128513; Meet Friends</p>
             <p>&#128198; Share Advice Discuss Forecasts</p>
         </div>
+
+Join ${spot.name} Community

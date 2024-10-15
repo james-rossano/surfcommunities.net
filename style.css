@@ -3,9 +3,23 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden; /* Hide horizontal scrollbar */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Vertical stacking */
+    background-color: white; /* Sidebars color */
     font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+#content-container {
+    display: flex;
+    flex: 1; /* Takes remaining space */
+    justify-content: center;
+    align-items: stretch;
+}
+
+#map-container {
+    width: 70%; /* Map now takes 60% of the screen width */
+    max-width: 1000px; /* Optional: Limit the max width */
 }
 
 header {
@@ -15,7 +29,8 @@ header {
     padding: 10px;
     font-size: 24px;
     font-weight: bold;
-    flex: 0 0 auto; /* Fix for header */
+    flex: 0 0 auto;
+    width: 100%;
 }
 
 footer {
@@ -24,45 +39,51 @@ footer {
     text-align: center;
     padding: 10px;
     font-size: 12px;
-    flex: 0 0 auto; /* Fix for footer */
+    flex: 0 0 auto;
+    width: 100%;
 }
 
 #map {
-    flex: 1 1 auto; /* Make the map take the remaining space between header and footer */
-    width: 100%;
+    width: 100%; /* Map fills the container */
+    height: 100%; /* Takes the remaining height */
 }
 
 .info-box {
     position: absolute;
     background-color: white;
-    padding: 20px;
+    padding: 0px;
     border-radius: 15px;
     width: 320px;
     z-index: 1000;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     display: none;
-    transition: transform 0.3s ease-out; /* Smooth appearance */
+    transition: transform 0.3s ease-out;
 }
 
 .info-image {
     width: 100%;
-    height: auto;
-    max-height: 150px; /* Ensure images don't overflow */
+    height: 100px; /* Adjust height for a narrower look */
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: 15px 15px 0 0;
+    margin: 0;
 }
 
 .spot-details {
-    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: #06065D; /* Maintain visibility */
+    text-align: center;
     line-height: 1.6;
-    margin-bottom: 10px;
+    margin-top: 10px; /* Space between image and name */
+    margin-bottom: 6px;
 }
 
 /* Label Styling for Surf Spot Names */
 .label {
     background-color: #0E49B5;
     color: white;
+    text-decoration: none;
     padding: 4px 8px;
     border-radius: 5px;
     font-size: 12px;
@@ -104,24 +125,26 @@ footer {
 
 .forecast-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    gap: 10px; /* Space between buttons */
-    margin-top: 10px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px; /* Add padding inside the container */
+    margin: 10px 0; /* Maintain vertical space above and below */
+    box-sizing: border-box;
 }
 
 button.forecast-btn {
     padding: 10px;
-    background-color: #aaa; /* Grey buttons */
+    background-color: #888; /* Grey buttons */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 button.forecast-btn:hover {
-    background-color: #888; /* Darker grey on hover */
+    text-decoration: underline;
 }
 
 .descriptors p {
@@ -135,29 +158,31 @@ button.forecast-btn:hover {
 
 .community-link {
     display: block;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #ED0101;
-    color: white;
+    margin-top: 10px; /* Add space above the button */
+    padding: 15px;
+    width: 100%; 
+    border-radius: 0 0 15px 15px;
+    text-decoration: none;
+    background-color: #A70107;
+    color: white; /* Force white text color */
     text-align: center;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 5px;
-    text-decoration: none;
     transition: background-color 0.3s ease;
+    box-sizing: border-box;
 }
 
 .community-link:hover {
-    background-color: #A70107;
+    text-decoration: underline;
 }
 
 #search-container {
     position: absolute;
-    top: 60px;
-    left: 50px; /* Move it slightly to the right */
+    top: 60px; /* Move it further down */
+    left: calc(22%); /* Move it further right */
     z-index: 1000;
     display: flex;
-    flex-direction: column; /* Allows stacking of suggestions below */
+    flex-direction: column;
     align-items: flex-start;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
