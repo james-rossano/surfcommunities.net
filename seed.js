@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const SurfSpot = require('./models/surfspot');
-const surfSpots = require('./surf_spots.json'); // Your JSON file
+const surfSpots = require('./output.json'); // Your JSON file
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://jrossano4:12345@surfcommunity-cluster.gi10z.mongodb.net/?retryWrites=true&w=majority&appName=surfcommunity-cluster')
