@@ -13,6 +13,7 @@ let labels = [];  // Store labels
 fetch('/api/surfspots')
     .then(response => response.json())
     .then(data => {
+        console.log(data);
         surfSpots = data;
         updateMarkers(); // Load markers and labels initially
 })
@@ -75,9 +76,11 @@ function showDetails(spot, latLng) {
     infoBox.style.display = 'block';
     infoBox.style.visibility = 'hidden'; // Prevent flicker while positioning
 
-    const forecastLinks = spot.forecast
-        .map(f => `<button class="forecast-btn" onclick="window.open('${f.url}', '_blank')">${f.name}</button>`)
-        .join('') || 'No forecast data available';
+    const forecastLinks = Array.isArray(spot.forecast)
+        ? spot.forecast
+            .map(f => `<button class="forecast-btn" onclick="window.open('${f.url || '#'}', '_blank')">${f.name || 'Unnamed Forecast'}</button>`)
+            .join('')
+        : 'No forecast data available';
 
     document.getElementById('spot-details').innerHTML = `
         <div class="spot-details">

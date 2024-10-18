@@ -1,22 +1,19 @@
 const mongoose = require('mongoose');
 
-const surfSpotSchema = new mongoose.Schema({
+// Define your schema
+const SurfSpotSchema = new mongoose.Schema({
+    id: Number,
     name: String,
-    location: String,
-    type: String,
-    description: String,
     coordinates: {
         lat: Number,
         lng: Number
     },
-    image: String,
-    forecast: [
-        {
-            name: String,
-            url: String
-        }
-    ]
-});
+    country: String,
+    region: String,
+    sub_region: String,
+    description: String,
+    forecast: Array
+}, { collection: 'surfspots' }); // Specify collection name here
 
-const SurfSpot = mongoose.model('SurfSpot', surfSpotSchema);
-module.exports = SurfSpot;
+// Create the model using the schema
+module.exports = mongoose.model('SurfSpot', SurfSpotSchema);

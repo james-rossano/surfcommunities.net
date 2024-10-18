@@ -268,7 +268,7 @@
     {
         "id": 27,
         "type": "Surf Spot",
-        "name": "Hunchies hunchies bay",
+        "name": "Hunchies Hunchies bay",
         "coordinates": {
             "lat": -32.53411465,
             "lng": 115.69004774
@@ -520,7 +520,7 @@
     {
         "id": 70,
         "type": "Surf Spot",
-        "name": "Vinanibe lake",
+        "name": "Vinanibe Lake",
         "coordinates": {
             "lat": -25.05325697,
             "lng": 46.99951172
