@@ -62,7 +62,7 @@ footer {
 
 .info-image {
     width: 100%;
-    height: 100px; /* Adjust height for a narrower look */
+    height: 60px; /* Adjust height for a narrower look */
     object-fit: cover;
     border-radius: 15px 15px 0 0;
     margin: 0;
@@ -70,7 +70,7 @@ footer {
 
 .spot-details {
     text-transform: uppercase;
-    font-family: 'Montserrat';
+    font-family: Tahoma, sans-serif;
     font-size: 20px;
     color: #06065D; /* Maintain visibility */
     text-align: center;

@@ -13,7 +13,6 @@ let labels = [];  // Store labels
 fetch('/api/surfspots')
     .then(response => response.json())
     .then(data => {
-        console.log(data);
         surfSpots = data;
         updateMarkers(); // Load markers and labels initially
 })
