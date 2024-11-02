@@ -70,7 +70,7 @@ footer {
 
 .spot-details {
     text-transform: uppercase;
-    font-family: Tahoma, sans-serif;
+    /*font-family: Tahoma, sans-serif;*/
     font-size: 20px;
     color: #06065D; /* Maintain visibility */
     text-align: center;
