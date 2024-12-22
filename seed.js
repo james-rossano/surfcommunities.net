@@ -1,3 +1,57 @@
+const sqlite3 = require('sqlite3').verbose();
+const surfSpots = require('./output.json');
+const db = new sqlite3.Database('./surfcommunity.db');
+
+// Create table if it doesn't exist
+db.serialize(() => {
+    db.run(`CREATE TABLE IF NOT EXISTS surfspots (
+        id INTEGER PRIMARY KEY,
+        type TEXT,
+        name TEXT NOT NULL,
+        latitude REAL NOT NULL,
+        longitude REAL NOT NULL,
+        country TEXT,
+        region TEXT,
+        sub_region TEXT,
+        description TEXT,
+        forecast TEXT
+    )`);
+    
+    const insertStmt = db.prepare(`INSERT INTO surfspots 
+        (id, type, name, latitude, longitude, country, region, sub_region, description, forecast) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ON CONFLICT(id) DO UPDATE SET
+            type = excluded.type,
+            name = excluded.name,
+            latitude = excluded.latitude,
+            longitude = excluded.longitude,
+            country = excluded.country,
+            region = excluded.region,
+            sub_region = excluded.sub_region,
+            description = excluded.description,
+            forecast = excluded.forecast`);
+
+    surfSpots.forEach(spot => {
+        insertStmt.run(
+            spot.id,
+            spot.type,
+            spot.name,
+            spot.coordinates.lat,
+            spot.coordinates.lng,
+            spot.country,
+            spot.region,
+            spot.sub_region,
+            spot.description,
+            JSON.stringify(spot.forecast) // Store forecast as JSON string
+        );
+    });
+
+    insertStmt.finalize();
+});
+
+db.close();
+
+/*
 const mongoose = require('mongoose');
 const SurfSpot = require('./models/surfspot'); // Your updated model
 const surfSpots = require('./output.json'); // Your JSON file
@@ -27,3 +81,4 @@ mongoose.connect('mongodb+srv://jrossano4:12345@surfcommunity-cluster.gi10z.mong
         console.error('Error upserting data:', err);
         mongoose.connection.close();
     });
+    */

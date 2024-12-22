@@ -19,49 +19,55 @@ fetch('/api/surfspots')
 .catch(error => console.error('Error fetching surf spots:', error));
 
 function updateMarkers() {
-    // Clear previous markers and labels
     markers.forEach(marker => map.removeLayer(marker));
     labels.forEach(label => map.removeLayer(label));
     markers = [];
     labels = [];
 
-    const bounds = map.getBounds(); // Get the current map bounds
-    const zoomLevel = map.getZoom(); // Get the current zoom level
+    const bounds = map.getBounds();
+    const zoomLevel = map.getZoom();
 
-    // Filter surf spots that are within the visible bounds
-    const visibleSpots = surfSpots.filter(spot =>
-        bounds.contains([spot.coordinates.lat, spot.coordinates.lng])
-    );
+    const visibleSpots = surfSpots.filter(spot => {
+        const hasCoordinates = spot.latitude !== undefined && spot.longitude !== undefined;
+        if (!hasCoordinates) {
+            console.warn('Spot missing valid coordinates:', spot);
+        }
+        return hasCoordinates && bounds.contains([spot.latitude, spot.longitude]);
+    });
 
     visibleSpots.forEach(spot => {
-        if (zoomLevel < 10) {
-            // Show circle markers for lower zoom levels
-            const marker = L.circleMarker([spot.coordinates.lat, spot.coordinates.lng], {
-                radius: 8,
-                fillColor: '#0E49B5',
-                color: '#0E49B5',
-                weight: 1,
-                opacity: 1,
-                fillOpacity: 0.8
-            }).on('click', () => showDetails(spot, [spot.coordinates.lat, spot.coordinates.lng]));
+        try {
+            if (zoomLevel < 10) {
+                const marker = L.circleMarker([spot.latitude, spot.longitude], {
+                    radius: 8,
+                    fillColor: '#0E49B5',
+                    color: '#0E49B5',
+                    weight: 1,
+                    opacity: 1,
+                    fillOpacity: 0.8
+                }).on('click', () => showDetails(spot, [spot.latitude, spot.longitude]));
 
-            marker.addTo(map);
-            markers.push(marker);
-        } else {
+                marker.addTo(map);
+                markers.push(marker);
+            } else {
+                const labelHtml = `<div class="label">${spot.name}</div>`;
+                const label = L.marker([spot.latitude, spot.longitude], {
+                    icon: L.divIcon({
+                        className: 'label-icon',
+                        html: labelHtml,
+                    }),
+                }).on('click', () => showDetails(spot, [spot.latitude, spot.longitude]));
 
-            const labelHtml = `<div class="label">${spot.name}</div>`;
-            const label = L.marker([spot.coordinates.lat, spot.coordinates.lng], {
-                icon: L.divIcon({
-                    className: 'label-icon',
-                    html: labelHtml,
-                }),
-            }).on('click', () => showDetails(spot, [spot.coordinates.lat, spot.coordinates.lng]));
-
-            label.addTo(map);
-            labels.push(label);
+                label.addTo(map);
+                labels.push(label);
+            }
+        } catch (error) {
+            console.error('Error processing spot:', spot, error);
         }
     });
 }
+
+
     
 // Recalculate markers and labels when the map is moved or zoomed
 map.on('moveend', updateMarkers);

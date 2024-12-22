@@ -1,3 +1,48 @@
+const express = require('express');
+const sqlite3 = require('sqlite3').verbose();
+const path = require('path');
+const app = express();
+const port = process.env.PORT || 3000;
+
+// Serve static files from the project directory
+app.use(express.static(path.join(__dirname)));
+
+// Initialize SQLite database
+const db = new sqlite3.Database('./surfcommunity.db');
+
+// Create table if it doesn't exist
+db.serialize(() => {
+    db.run(`CREATE TABLE IF NOT EXISTS surfspots (
+        id INTEGER PRIMARY KEY,
+        name TEXT NOT NULL,
+        latitude REAL NOT NULL,
+        longitude REAL NOT NULL,
+        forecast TEXT,
+        image TEXT
+    )`);
+});
+
+app.get('/api/surfspots', (req, res) => {
+    db.all('SELECT * FROM surfspots', [], (err, rows) => {
+        if (err) {
+            console.error('Error fetching surf spots:', err);
+            res.status(500).send('Error fetching surf spots');
+        } else {
+            console.log('Data sent to frontend:', rows); // Log the data
+            res.json(rows);
+        }
+    });
+});
+
+// Start the server
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});
+
+
+
+
+/*
 require('dotenv').config(); // Load environment variables
 const express = require('express');
 const mongoose = require('mongoose');
@@ -41,3 +86,4 @@ app.get('/api/surfspots', async (req, res) => {
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
+*/
