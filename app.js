@@ -90,7 +90,7 @@ function showDetails(spot, latLng) {
         </div>
         
         <a href="https://t.me/${spot.name.replace(/\s+/g, '')}_surfcommunity" target="_blank" class="community-link">
-            Join Community
+            Join Group
         </a>
     `;
 
