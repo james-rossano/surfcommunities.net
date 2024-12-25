@@ -22,17 +22,37 @@ db.serialize(() => {
     )`);
 });
 
+const fs = require('fs');
+
+// Endpoint to fetch regions data
+app.get('/api/regions', (req, res) => {
+    const filePath = path.join(__dirname, 'surf_spots/all-regions.json');
+    fs.readFile(filePath, (err, data) => {
+        if (err) {
+            res.status(500).send('Error reading regions file');
+        } else {
+            res.json(JSON.parse(data));
+        }
+    });
+});
+
 app.get('/api/surfspots', (req, res) => {
     db.all('SELECT * FROM surfspots', [], (err, rows) => {
         if (err) {
             console.error('Error fetching surf spots:', err);
             res.status(500).send('Error fetching surf spots');
         } else {
-            console.log('Data sent to frontend:', rows); // Log the data
-            res.json(rows);
+            // Parse the forecast field and add coordinates object
+            const transformedRows = rows.map(spot => ({
+                ...spot,
+                coordinates: { lat: spot.latitude, lng: spot.longitude },
+                forecast: spot.forecast ? JSON.parse(spot.forecast) : [] // Parse JSON string
+            }));
+            res.json(transformedRows);
         }
     });
 });
+
 
 // Start the server
 app.listen(port, () => {

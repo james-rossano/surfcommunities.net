@@ -9,6 +9,56 @@ let surfSpots = [];
 let markers = []; // Store markers
 let labels = [];  // Store labels
 
+map.on('click', function(e) {
+    // Get the latitude and longitude from the event object
+    const { lat, lng } = e.latlng;
+
+    // Log the coordinates to the console
+    console.log(`Latitude: ${lat}, Longitude: ${lng}`);
+});
+
+// Load the regions data
+fetch('/api/regions') // Ensure this endpoint serves your all-regions.json
+    .then(response => response.json())
+    .then(data => {
+        addRegionBoxes(data);
+    })
+    .catch(error => console.error('Error loading regions:', error));
+
+function addRegionBoxes(regions) {
+    regions.forEach(region => {
+        region.coordinates.forEach(box => {
+            const point1 = box.point1.split(',').map(coord => parseFloat(coord.trim()));
+            const point2 = box.point2.split(',').map(coord => parseFloat(coord.trim()));
+
+            // Create a bounding box using the two points
+            const bounds = [
+                [Math.min(point1[0], point2[0]), Math.min(point1[1], point2[1])],
+                [Math.max(point1[0], point2[0]), Math.max(point1[1], point2[1])]
+            ];
+
+            // Add the rectangle to the map
+            L.rectangle(bounds, {
+                color: 'red',
+                weight: 1,
+                fillOpacity: 0.4 // Semi-transparent fill
+            }).addTo(map);
+
+            // Calculate the top-right corner of the box
+            const topRightCorner = [Math.min(point1[0], point2[0]), Math.max(point1[1], point2[1])];
+
+            // Add a label with the region name at the top-right corner
+            const regionLabel = L.marker(topRightCorner, {
+                icon: L.divIcon({
+                    className: 'region-label', // Custom CSS class for styling
+                    html: `<div>${region.name}</div>`,
+                    iconSize: null // Size adjusts to content
+                }),
+            }).addTo(map);
+        });
+    });
+}    
+
 // Fetch surf spots data from the API
 fetch('/api/surfspots')
     .then(response => response.json())
