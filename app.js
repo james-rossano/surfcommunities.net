@@ -14,16 +14,32 @@ map.on('click', function(e) {
     const { lat, lng } = e.latlng;
 
     // Log the coordinates to the console
-    console.log(`Latitude: ${lat}, Longitude: ${lng}`);
+    console.log(`${lat}, ${lng}`);
 });
 
-// Load the regions data
-fetch('/api/regions') // Ensure this endpoint serves your all-regions.json
+let regions = [];
+
+// Fetch regions data
+const urlParams = new URLSearchParams(window.location.search);
+const showAll = urlParams.get('showAll') === '1';
+
+fetch('/api/regions')
     .then(response => response.json())
     .then(data => {
-        addRegionBoxes(data);
+        regions = data;
+        if (showAll) {
+            addRegionBoxes(data); // Only add region boxes in dev mode
+        }
     })
-    .catch(error => console.error('Error loading regions:', error));
+
+function findRegionForSpot(spot) {
+    // Match the surf spot with its region
+    return regions.find(region => 
+        region.name === spot.sub_region &&
+        region.region === spot.region &&
+        region.country === spot.country
+    );
+}
 
 function addRegionBoxes(regions) {
     regions.forEach(region => {
@@ -44,11 +60,11 @@ function addRegionBoxes(regions) {
                 fillOpacity: 0.4 // Semi-transparent fill
             }).addTo(map);
 
-            // Calculate the top-right corner of the box
+            // Calculate the top-right corner of the box for the label
             const topRightCorner = [Math.min(point1[0], point2[0]), Math.max(point1[1], point2[1])];
 
             // Add a label with the region name at the top-right corner
-            const regionLabel = L.marker(topRightCorner, {
+            L.marker(topRightCorner, {
                 icon: L.divIcon({
                     className: 'region-label', // Custom CSS class for styling
                     html: `<div>${region.name}</div>`,
@@ -57,16 +73,15 @@ function addRegionBoxes(regions) {
             }).addTo(map);
         });
     });
-}    
+} 
 
-// Fetch surf spots data from the API
-fetch('/api/surfspots')
+fetch(`/api/surfspots?showAll=${showAll ? 1 : 0}`)
     .then(response => response.json())
     .then(data => {
         surfSpots = data;
-        updateMarkers(); // Load markers and labels initially
-})
-.catch(error => console.error('Error fetching surf spots:', error));
+        updateMarkers();
+    })
+    .catch(error => console.error('Error fetching surf spots:', error));
 
 function updateMarkers() {
     markers.forEach(marker => map.removeLayer(marker));
@@ -131,6 +146,8 @@ function showDetails(spot, latLng) {
     infoBox.style.display = 'block';
     infoBox.style.visibility = 'hidden'; // Prevent flicker while positioning
 
+    const telegramLink = spot.telegram_link || '#';
+
     const forecastLinks = Array.isArray(spot.forecast)
         ? spot.forecast
             .map(f => `<button class="forecast-btn" onclick="window.open('${f.url || '#'}', '_blank')">${f.name || 'Unnamed Forecast'}</button>`)
@@ -145,13 +162,13 @@ function showDetails(spot, latLng) {
             ${forecastLinks}
         </div>
         
-        <a href="https://t.me/${spot.name.replace(/\s+/g, '')}_surfcommunity" target="_blank" class="community-link">
+        <a href="${telegramLink}" target="_blank" class="community-link">
             Join Group
         </a>
     `;
 
     const spotImage = document.getElementById('spot-image');
-    spotImage.src = spot.image || 'images/test.jpg';
+    spotImage.src = spot.image || 'images/spot_detail.jpg';
     spotImage.style.display = 'block';
 
     // Get map container and click point relative to the screen

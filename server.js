@@ -24,29 +24,50 @@ db.serialize(() => {
 
 const fs = require('fs');
 
-// Endpoint to fetch regions data
 app.get('/api/regions', (req, res) => {
-    const filePath = path.join(__dirname, 'surf_spots/all-regions.json');
-    fs.readFile(filePath, (err, data) => {
+    db.all("SELECT name, country, region, coordinates, `telegram-link` FROM regions", (err, rows) => {
         if (err) {
-            res.status(500).send('Error reading regions file');
-        } else {
-            res.json(JSON.parse(data));
+            res.status(500).json({ error: 'Error reading from database' });
+            console.error('Database error:', err);
+            return;
+        }
+
+        try {
+            const regions = rows.map(row => ({
+                name: row.name,
+                country: row.country,
+                region: row.region,
+                coordinates: JSON.parse(row.coordinates), // Parse JSON coordinates
+                telegramLink: row['telegram-link'] // Include the telegram link
+            }));
+            res.json(regions);
+        } catch (error) {
+            res.status(500).json({ error: 'Error parsing region data' });
+            console.error('Parsing error:', error);
         }
     });
 });
 
+
+
 app.get('/api/surfspots', (req, res) => {
-    db.all('SELECT * FROM surfspots', [], (err, rows) => {
+    const showAll = req.query.showAll === '1';
+
+    const query = showAll
+        ? 'SELECT * FROM surfspots'
+        : `SELECT s.* FROM surfspots s
+           JOIN regions r ON s.sub_region = r.name AND s.region = r.region AND s.country = r.country
+           WHERE r.\`telegram-link\` IS NOT NULL AND r.\`telegram-link\` != ''`;
+
+    db.all(query, [], (err, rows) => {
         if (err) {
             console.error('Error fetching surf spots:', err);
             res.status(500).send('Error fetching surf spots');
         } else {
-            // Parse the forecast field and add coordinates object
             const transformedRows = rows.map(spot => ({
                 ...spot,
                 coordinates: { lat: spot.latitude, lng: spot.longitude },
-                forecast: spot.forecast ? JSON.parse(spot.forecast) : [] // Parse JSON string
+                forecast: spot.forecast ? JSON.parse(spot.forecast) : []
             }));
             res.json(transformedRows);
         }
@@ -54,56 +75,10 @@ app.get('/api/surfspots', (req, res) => {
 });
 
 
-// Start the server
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-});
-
-
-
-
-/*
-require('dotenv').config(); // Load environment variables
-const express = require('express');
-const mongoose = require('mongoose');
-const rateLimit = require('express-rate-limit'); // Import rate limiter
-const SurfSpot = require('./models/surfspot'); // Import the Mongoose model
-
-const app = express();
-const port = process.env.PORT || 3000;
-
-// Set up rate limiter: 100 requests per 15 minutes per IP
-const apiLimiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 200, // Limit each IP to 100 requests per windowMs
-    message: 'Too many requests from this IP, please try again later.',
-});
-
-// Apply rate limiter to all API endpoints
-app.use('/api', apiLimiter); // Limits access to /api/* routes
-
-// Connect to MongoDB Atlas
-mongoose.connect(process.env.MONGO_URI)
-    .then(() => console.log('Connected to MongoDB Atlas'))
-    .catch(err => console.error('Error connecting to MongoDB:', err));
-
-// Serve static files with cache-control
-app.use(express.static(__dirname, {
-    maxAge: '1d', // Cache for one day
-}));
-
-// API endpoint to fetch surf spots from MongoDB
-app.get('/api/surfspots', async (req, res) => {
-    try {
-        const surfSpots = await SurfSpot.find();
-        res.json(surfSpots);
-    } catch (err) {
-        res.status(500).send('Error fetching surf spots');
-    }
-});
 
 // Start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
-*/
+
+

@@ -1,0 +1,335 @@
+[
+    {
+        "name": "Monmouth County",
+        "country": "US",
+        "region": "New Jersey",
+        "coordinates": [
+            {
+                "point1": "40.504112, -74.056815",
+                "point2": "40.099588, -73.930794"
+            }
+        ],
+        "spotIDs": [
+            {
+                "name": "Sands",
+                "ID": 258
+            },
+            {
+                "name": "The Box",
+                "ID": 790
+            },
+            {
+                "name": "Loch Arbor,Darlington,Deal",
+                "ID": 1292
+            },
+            {
+                "name": "Loch Arbor",
+                "ID": 1937
+            },
+            {
+                "name": "Manasquan Inlet",
+                "ID": 2582
+            },
+            {
+                "name": "Pavilion Ave, Long Branch",
+                "ID": 3500
+            },
+            {
+                "name": "Phillips Pump House",
+                "ID": 3746
+            },
+            {
+                "name": "Belmar - 16 th Street",
+                "ID": 5195
+            },
+            {
+                "name": "Allenhurst",
+                "ID": 5289
+            },
+            {
+                "name": "Sandy Hook The Cove",
+                "ID": 6445
+            },
+            {
+                "name": "Ocean Lane, Deal",
+                "ID": 6917
+            },
+            {
+                "name": "Bradley Beach",
+                "ID": 8387
+            },
+            {
+                "name": "Asbury Park",
+                "ID": 8916
+            }
+        ]
+    },
+    {
+        "name": "Ocean County",
+        "country": "US",
+        "region": "New Jersey",
+        "coordinates": [
+            {
+                "point1": "40.101767, -74.029390",
+                "point2": "39.491509, -74.369498"
+            }
+        ],
+        "spotIDs": [
+            {
+                "name": "L.B.I - 82st",
+                "ID": 105
+            },
+            {
+                "name": "Cape May Ave.",
+                "ID": 234
+            },
+            {
+                "name": "Seacrest Drive",
+                "ID": 1237
+            },
+            {
+                "name": "Wooden Jetty",
+                "ID": 1741
+            },
+            {
+                "name": "Tices Sholls",
+                "ID": 2706
+            },
+            {
+                "name": "5th Street Beach Haven",
+                "ID": 3484
+            },
+            {
+                "name": "LBI - Long Beach Island",
+                "ID": 3788
+            },
+            {
+                "name": "Lavallette",
+                "ID": 4738
+            },
+            {
+                "name": "Middlesex ",
+                "ID": 4934
+            },
+            {
+                "name": "Normandy Beach - 7th Street",
+                "ID": 5174
+            },
+            {
+                "name": "Brick Beach 2",
+                "ID": 6133
+            },
+            {
+                "name": "Seaside Park",
+                "ID": 6164
+            },
+            {
+                "name": "58th Street",
+                "ID": 6355
+            },
+            {
+                "name": "Bay Head",
+                "ID": 6388
+            },
+            {
+                "name": "Harvey Cedars - 7 E. Cape May Street",
+                "ID": 6883
+            },
+            {
+                "name": "Seaside Park, NJ",
+                "ID": 8346
+            }
+        ]
+    },
+    {
+        "name": "Atlantic County",
+        "country": "US",
+        "region": "New Jersey",
+        "coordinates": [
+            {
+                "point1": "39.484397, -74.287262",
+                "point2": "39.301441, -74.565600"
+            }
+        ],
+        "spotIDs": [
+            {
+                "name": "38th St. Beach",
+                "ID": 287
+            },
+            {
+                "name": "Great Egg Harbor Inlet (Longport)",
+                "ID": 777
+            },
+            {
+                "name": "Margate Pier",
+                "ID": 952
+            },
+            {
+                "name": "The Jetty",
+                "ID": 1253
+            },
+            {
+                "name": "Dutches Wedge",
+                "ID": 2436
+            },
+            {
+                "name": "Ventnor Pier",
+                "ID": 5261
+            },
+            {
+                "name": "Crystals",
+                "ID": 5902
+            },
+            {
+                "name": "TwentySevens",
+                "ID": 7605
+            },
+            {
+                "name": "Castles",
+                "ID": 7798
+            }
+        ]
+    },
+    {
+        "name": "Cape May County",
+        "country": "US",
+        "region": "New Jersey",
+        "coordinates": [
+            {
+                "point1": "39.300341, -74.540275",
+                "point2": "38.898525, -75.044842"
+            }
+        ],
+        "spotIDs": [
+            {
+                "name": "Second Street",
+                "ID": 147
+            },
+            {
+                "name": "Avalon - 15th Street",
+                "ID": 322
+            },
+            {
+                "name": "Diamond Beach",
+                "ID": 508
+            },
+            {
+                "name": "Chodes",
+                "ID": 1366
+            },
+            {
+                "name": "36th Street",
+                "ID": 2908
+            },
+            {
+                "name": "Waverly",
+                "ID": 4580
+            },
+            {
+                "name": "57th Street",
+                "ID": 4665
+            },
+            {
+                "name": "Strathmere, 7th street",
+                "ID": 4748
+            },
+            {
+                "name": "The Cove, Cape May",
+                "ID": 5122
+            },
+            {
+                "name": "Ocean City - 8th Street",
+                "ID": 5577
+            },
+            {
+                "name": "Poverty Beach",
+                "ID": 5894
+            },
+            {
+                "name": "North Wildwood",
+                "ID": 5910
+            },
+            {
+                "name": "North St.",
+                "ID": 6375
+            },
+            {
+                "name": "St Phillip's",
+                "ID": 6454
+            },
+            {
+                "name": "Stone Harbor 110",
+                "ID": 6595
+            },
+            {
+                "name": "Wildwood 2nd Street",
+                "ID": 7096
+            },
+            {
+                "name": "Nuns beach",
+                "ID": 7160
+            },
+            {
+                "name": "Avalon - 30th Street",
+                "ID": 7190
+            },
+            {
+                "name": "Trestles",
+                "ID": 8071
+            },
+            {
+                "name": "Ocean City - 14th 15th St",
+                "ID": 8377
+            },
+            {
+                "name": "Ocean City - 7th Street",
+                "ID": 8841
+            }
+        ]
+    },
+    {
+        "name": "Delaware",
+        "country": "US",
+        "region": "Delaware",
+        "coordinates": [
+            {
+                "point1": "38.84569742993362, -75.22584960879202",
+                "point2": "38.42519144933772, -74.92923365431753"
+            }
+        ],
+        "spotIDs": [
+            {
+                "name": "The Cove -  Delaware",
+                "ID": 205
+            },
+            {
+                "name": "Tower Road",
+                "ID": 451
+            },
+            {
+                "name": "Dewey Beach",
+                "ID": 1151
+            },
+            {
+                "name": "Rehoboth - Main",
+                "ID": 1484
+            },
+            {
+                "name": "Indian River Inlet",
+                "ID": 3451
+            },
+            {
+                "name": "Fenwick Island",
+                "ID": 5220
+            },
+            {
+                "name": "Naval Jetty",
+                "ID": 6168
+            },
+            {
+                "name": "Bethany Hollywood St",
+                "ID": 7212
+            }
+        ]
+    }
+]

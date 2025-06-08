@@ -1,5 +1,5 @@
 const sqlite3 = require('sqlite3').verbose();
-const surfSpots = require('./output.json');
+const surfSpots = require('./all_surf_spots.json');
 const db = new sqlite3.Database('./surfcommunity.db');
 
 // Create table if it doesn't exist
