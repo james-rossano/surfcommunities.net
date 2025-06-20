@@ -6,13 +6,13 @@ db_file = "surfcommunity.db"
 
 # New region details
 new_region = {
-    "name": "West Palm Beach Region",
+    "name": "Olympic Coast",
     "country": "US",
-    "region": "Florida",
+    "region": "OR",
     "coordinates": [
         {
-            "point1": "27.529219582707853, -80.40371991505613",
-            "point2": "26.522438593851135, -79.98637910695756"
+            "point1": "47.82126957575633, -122.46412977479824",
+            "point2": "48.68443293102328, -124.9688867236938"
         }
     ]
 }

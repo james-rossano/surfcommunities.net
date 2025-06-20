@@ -14,4 +14,4 @@ def update_telegram_link(region_name, telegram_link):
             print(f"Updated region '{region_name}' with Telegram link.")
 
 # Example usage
-update_telegram_link("Monmouth County", "https://t.me/monmouthsurf")
+update_telegram_link("Monmouth County", "https://t.me/+LgE7xBs90RpkZDRh")

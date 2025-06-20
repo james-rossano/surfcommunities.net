@@ -146,7 +146,8 @@ function showDetails(spot, latLng) {
     infoBox.style.display = 'block';
     infoBox.style.visibility = 'hidden'; // Prevent flicker while positioning
 
-    const telegramLink = spot.telegram_link || '#';
+    const matchedRegion = findRegionForSpot(spot);
+    const telegramLink = matchedRegion?.telegramLink || '#';
 
     const forecastLinks = Array.isArray(spot.forecast)
         ? spot.forecast
