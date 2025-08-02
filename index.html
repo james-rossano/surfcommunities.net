@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>surfcommunities.net</title>
+    <title>surfgroups.net</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/images/fav.ico">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 </head>
 <body>
     <header>
-        surfcommunities.net
+        surfgroups.net
     </header>
 
     <div id="content-container">
@@ -26,18 +28,19 @@
         <div id="suggestions"></div>
     </div>
 
-
-    <footer>
-        &copy; 2024 surfcommunities.net. All rights reserved.
-    </footer>
-
+    <div id="loading-overlay"></div>
     <div id="info-box" class="info-box">
         <img id="spot-image" class="info-image" />
         <div id="spot-details"></div>
     </div>
 
+    <footer>
+        &copy; 2024 surfcommunities.net. All rights reserved.
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
     <script src="app.js?v=1.0"></script>
 </body>
 </html>

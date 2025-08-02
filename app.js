@@ -1,14 +1,34 @@
-// Initialize the Leaflet map with the original OpenStreetMap theme
-const map = L.map('map').setView([40.1795, -74.0327], 8);
+// Define initial center points for specific regions
+const initialCenters = {
+    '/indonesia': { lat: -2.5, lng: 118, zoom: 5 },
+    '/california': { lat: 36.7783, lng: -119.4179, zoom: 6 },
+    '/australia': { lat: -25.2744, lng: 133.7751, zoom: 5 },
+    // add more as needed
+};
+
+const path = window.location.pathname.toLowerCase();
+const center = initialCenters[path] || { lat: 40.1795, lng: -74.0327, zoom: 6 };
+
+// Initialize the Leaflet map with custom bounds and no wrap
+const map = L.map('map', {
+    worldCopyJump: false,
+    minZoom: 3
+}).setView([center.lat, center.lng], center.zoom);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
+    attribution: '&copy; OpenStreetMap contributors',
+    noWrap: false
 }).addTo(map);
 
 let surfSpots = [];
 let markers = []; // Store markers
 let labels = [];  // Store labels
+let regions = [];
 
+const urlParams = new URLSearchParams(window.location.search);
+const showAll = urlParams.get('showAll') === '1';
+
+// Log coordinates on map click (dev utility)
 map.on('click', function(e) {
     // Get the latitude and longitude from the event object
     const { lat, lng } = e.latlng;
@@ -17,12 +37,7 @@ map.on('click', function(e) {
     console.log(`${lat}, ${lng}`);
 });
 
-let regions = [];
-
 // Fetch regions data
-const urlParams = new URLSearchParams(window.location.search);
-const showAll = urlParams.get('showAll') === '1';
-
 fetch('/api/regions')
     .then(response => response.json())
     .then(data => {
@@ -75,15 +90,10 @@ function addRegionBoxes(regions) {
     });
 } 
 
-fetch(`/api/surfspots?showAll=${showAll ? 1 : 0}`)
-    .then(response => response.json())
-    .then(data => {
-        surfSpots = data;
-        updateMarkers();
-    })
-    .catch(error => console.error('Error fetching surf spots:', error));
-
 function updateMarkers() {
+    if (window.markerClusterGroup) {
+        map.removeLayer(window.markerClusterGroup);
+    }
     markers.forEach(marker => map.removeLayer(marker));
     labels.forEach(label => map.removeLayer(label));
     markers = [];
@@ -92,121 +102,137 @@ function updateMarkers() {
     const bounds = map.getBounds();
     const zoomLevel = map.getZoom();
 
-    const visibleSpots = surfSpots.filter(spot => {
-        const hasCoordinates = spot.latitude !== undefined && spot.longitude !== undefined;
-        if (!hasCoordinates) {
-            console.warn('Spot missing valid coordinates:', spot);
-        }
-        return hasCoordinates && bounds.contains([spot.latitude, spot.longitude]);
-    });
+    // Only filter visible spots
+    const visibleSpots = surfSpots.filter(spot =>
+        spot.latitude !== undefined && spot.longitude !== undefined &&
+        (zoomLevel < 11 ||
+            (spot.latitude >= bounds.getSouth() &&
+             spot.latitude <= bounds.getNorth() &&
+             spot.longitude >= bounds.getWest() &&
+             spot.longitude <= bounds.getEast()))
+    );
+
+    if (zoomLevel < 11) {
+        window.markerClusterGroup = L.markerClusterGroup();
+    }
 
     visibleSpots.forEach(spot => {
-        try {
-            if (zoomLevel < 10) {
-                const marker = L.circleMarker([spot.latitude, spot.longitude], {
-                    radius: 8,
-                    fillColor: '#0E49B5',
-                    color: '#0E49B5',
-                    weight: 1,
-                    opacity: 1,
-                    fillOpacity: 0.8
-                }).on('click', () => showDetails(spot, [spot.latitude, spot.longitude]));
-
-                marker.addTo(map);
-                markers.push(marker);
-            } else {
-                const labelHtml = `<div class="label">${spot.name}</div>`;
-                const label = L.marker([spot.latitude, spot.longitude], {
-                    icon: L.divIcon({
-                        className: 'label-icon',
-                        html: labelHtml,
-                    }),
-                }).on('click', () => showDetails(spot, [spot.latitude, spot.longitude]));
-
-                label.addTo(map);
-                labels.push(label);
-            }
-        } catch (error) {
-            console.error('Error processing spot:', spot, error);
+        const latLng = [spot.latitude, spot.longitude];
+        let marker;
+        if (zoomLevel < 10) {
+            marker = L.circleMarker(latLng, {
+                radius: 8,
+                fillColor: '#0E49B5',
+                color: '#0E49B5',
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 0.8
+            });
+            marker.on('click', () => showDetails(spot, latLng));
+            window.markerClusterGroup.addLayer(marker);
+        } else {
+            const labelHtml = `<div class="label">${spot.name}</div>`;
+            marker = L.marker(latLng, {
+                icon: L.divIcon({
+                    className: 'label-icon',
+                    html: labelHtml,
+                }),
+            });
+            marker.on('click', () => showDetails(spot, latLng));
+            marker.addTo(map);
+            labels.push(marker);
         }
+        markers.push(marker);
     });
+
+    if (zoomLevel < 11) {
+        map.addLayer(window.markerClusterGroup);
+    }
 }
-
-
     
 // Recalculate markers and labels when the map is moved or zoomed
 map.on('moveend', updateMarkers);
+map.on('zoomend', updateMarkers); // Optional: keep if you want updates after panning
     
 
 // Function to display surf spot details in the info box
 function showDetails(spot, latLng) {
     const infoBox = document.getElementById('info-box');
-
-    // Temporarily show the info box to get its dimensions
     infoBox.style.display = 'block';
-    infoBox.style.visibility = 'hidden'; // Prevent flicker while positioning
+    infoBox.style.visibility = 'hidden';
 
-    const matchedRegion = findRegionForSpot(spot);
-    const telegramLink = matchedRegion?.telegramLink || '#';
+    // Fetch details from the DB using spot-id
+    fetch(`/api/spotdetails?spot_id=${spot["spot-id"]}`)
+        .then(response => response.json())
+        .then(details => {
+            // Fetch region info if needed
+            fetch(`/api/regiondetails?region_id=${spot["region-id"]}`)
+                .then(regionRes => regionRes.json())
+                .then(region => {
+                    const telegramLink = region?.telegram_link || '#';
+                    let forecastLinks = '';
+                    if (Array.isArray(details.forecast) && details.forecast.length > 0) {
+                        forecastLinks = details.forecast
+                            .map(f => `<button class="forecast-btn" onclick="window.open('${f.url || '#'}', '_blank')">${f.name || 'Unnamed Forecast'}</button>`)
+                            .join('');
+                    }
 
-    const forecastLinks = Array.isArray(spot.forecast)
-        ? spot.forecast
-            .map(f => `<button class="forecast-btn" onclick="window.open('${f.url || '#'}', '_blank')">${f.name || 'Unnamed Forecast'}</button>`)
-            .join('')
-        : 'No forecast data available';
+                    document.getElementById('spot-details').innerHTML = `
+                        <div class="spot-details">
+                            <strong>${spot.name}</strong><br>
+                        </div>
+                        ${forecastLinks ? `<div class="forecast-container">${forecastLinks}</div>` : ''}
+                        <a href="${telegramLink}" target="_blank" class="community-link">
+                            Join Group
+                        </a>
+                        <div>${details.description || ''}</div>
+                    `;
 
-    document.getElementById('spot-details').innerHTML = `
-        <div class="spot-details">
-            <strong>${spot.name}</strong><br>
-        </div>
-        <div class="forecast-container">
-            ${forecastLinks}
-        </div>
-        
-        <a href="${telegramLink}" target="_blank" class="community-link">
-            Join Group
-        </a>
-    `;
+                    const spotImage = document.getElementById('spot-image');
+                    spotImage.src = details.image || 'images/spot_detail.jpg';
+                    spotImage.style.display = 'block';
 
-    const spotImage = document.getElementById('spot-image');
-    spotImage.src = spot.image || 'images/spot_detail.jpg';
-    spotImage.style.display = 'block';
+                    // Use spot.latitude and spot.longitude for positioning
+                    const container = map.getContainer().getBoundingClientRect();
+                    const point = map.latLngToContainerPoint([spot.latitude, spot.longitude]);
 
-    // Get map container and click point relative to the screen
-    const container = map.getContainer().getBoundingClientRect();
-    const point = map.latLngToContainerPoint(latLng);
+                    // Calculate the initial position (bottom-right of the click point)
+                    let topPos = (point.y + container.top) - 100; // Slight offset below the click
+                    let leftPos = point.x + container.left + 10; // Slight offset to the right of the click
 
-    // Calculate the initial position (bottom-right of the click point)
-    let topPos = (point.y + container.top) - 100; // Slight offset below the click
-    let leftPos = point.x + container.left + 10; // Slight offset to the right of the click
+                    // Get the size of the info box
+                    const infoBoxHeight = infoBox.offsetHeight;
+                    const infoBoxWidth = infoBox.offsetWidth;
 
-    // Get the size of the info box
-    const infoBoxHeight = infoBox.offsetHeight;
-    const infoBoxWidth = infoBox.offsetWidth;
+                    // Ensure the box doesn't overlap the footer
+                    const footerHeight = document.querySelector('footer').offsetHeight;
+                    if (topPos + infoBoxHeight > window.innerHeight - footerHeight) {
+                        topPos = window.innerHeight - footerHeight - infoBoxHeight - 10;
+                    }
 
-    // Ensure the box doesn't overlap the footer
-    const footerHeight = document.querySelector('footer').offsetHeight;
-    if (topPos + infoBoxHeight > window.innerHeight - footerHeight) {
-        topPos = window.innerHeight - footerHeight - infoBoxHeight - 10;
-    }
+                    // Ensure the box stays within the map's left and right boundaries
+                    const mapLeft = container.left;
+                    const mapRight = container.right;
+                    if (leftPos + infoBoxWidth > mapRight) {
+                        leftPos = mapRight - infoBoxWidth - 10; // Adjust to stay within the right boundary
+                    }
+                    if (leftPos < mapLeft) {
+                        leftPos = mapLeft + 10; // Adjust to stay within the left boundary
+                    }
 
-    // Ensure the box stays within the map's left and right boundaries
-    const mapLeft = container.left;
-    const mapRight = container.right;
-    if (leftPos + infoBoxWidth > mapRight) {
-        leftPos = mapRight - infoBoxWidth - 10; // Adjust to stay within the right boundary
-    }
-    if (leftPos < mapLeft) {
-        leftPos = mapLeft + 10; // Adjust to stay within the left boundary
-    }
+                    // Ensure the box doesn't overflow at the top of the screen
+                    topPos = Math.max(10, topPos);
 
-    // Ensure the box doesn't overflow at the top of the screen
-    topPos = Math.max(10, topPos);
-
-    // Apply the calculated position and make the box visible
-    infoBox.style.top = `${topPos}px`;
-    infoBox.style.left = `${leftPos}px`;
-    infoBox.style.visibility = 'visible';
+                    // Apply the calculated position and make the box visible
+                    infoBox.style.top = `${topPos}px`;
+                    infoBox.style.left = `${leftPos}px`;
+                    infoBox.style.visibility = 'visible';
+                });
+        })
+        .catch(error => {
+            console.error('Error fetching spot details:', error);
+            infoBox.style.display = 'none';
+        });
 }
 
 // Search for surf spots by name and display suggestions
@@ -214,14 +240,13 @@ function searchSurfSpot(query) {
     const suggestions = surfSpots.filter(spot =>
         spot.name.toLowerCase().includes(query.toLowerCase())
     );
-
     displaySuggestions(suggestions);
 }
 
 // Display matching suggestions below the search bar
 function displaySuggestions(suggestions) {
     const suggestionsContainer = document.getElementById('suggestions');
-    suggestionsContainer.innerHTML = ''; // Clear previous suggestions
+    suggestionsContainer.innerHTML = '';
 
     if (suggestions.length > 0) {
         suggestions.forEach(spot => {
@@ -230,17 +255,16 @@ function displaySuggestions(suggestions) {
             suggestionItem.textContent = spot.name;
 
             suggestionItem.addEventListener('click', () => {
-                const { lat, lng } = spot.coordinates;
-                map.setView([lat, lng], 12); // Zoom to the spot
-                showDetails(spot, [lat, lng]);
-                suggestionsContainer.style.display = 'none'; // Hide suggestions
+                map.setView([spot.latitude, spot.longitude], 12);
+                showDetails(spot, [spot.latitude, spot.longitude]);
+                suggestionsContainer.style.display = 'none';
             });
 
             suggestionsContainer.appendChild(suggestionItem);
         });
-        suggestionsContainer.style.display = 'block'; // Show suggestions
+        suggestionsContainer.style.display = 'block';
     } else {
-        suggestionsContainer.style.display = 'none'; // Hide if no suggestions
+        suggestionsContainer.style.display = 'none';
     }
 }
 
@@ -258,3 +282,23 @@ document.getElementById('search-input').addEventListener('input', function (e) {
 map.on('click', () => document.getElementById('info-box').style.display = 'none');
 map.on('drag', () => document.getElementById('info-box').style.display = 'none');
 map.on('zoomend', () => document.getElementById('info-box').style.display = 'none');
+
+fetch('/surfspots.json')
+    .then(response => response.json())
+    .then(data => {
+        // Only show all if showAll is true
+        surfSpots = showAll
+            ? data
+            : data.filter(spot =>
+                spot["region-id"] !== null &&
+                spot["region-id"] !== undefined &&
+                spot["region-id"] !== "" &&
+                !isNaN(spot["region-id"])
+            );
+        updateMarkers();
+        document.getElementById('loading-overlay').style.display = 'none';
+    })
+    .catch(error => {
+        console.error('Error fetching surf spots:', error);
+        document.getElementById('loading-overlay').style.display = 'none';
+    });

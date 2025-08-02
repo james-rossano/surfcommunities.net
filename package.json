@@ -22,11 +22,11 @@
   },
   "homepage": "https://github.com/james-rossano/surfcommunity.net#readme",
   "dependencies": {
+    "better-sqlite3": "^12.2.0",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "express-rate-limit": "^7.4.1",
-    "mongodb": "^6.9.0",
-    "sqlite3": "^5.1.7"
+    "mongodb": "^6.9.0"
   },
   "devDependencies": {
     "clean-css-cli": "^5.6.3",

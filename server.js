@@ -1,6 +1,8 @@
 const express = require('express');
-const sqlite3 = require('sqlite3').verbose();
+const Database = require('better-sqlite3');
 const path = require('path');
+const fs = require('fs');
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -8,77 +10,98 @@ const port = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname)));
 
 // Initialize SQLite database
-const db = new sqlite3.Database('./surfcommunity.db');
+const db = new Database('./surf_data.db');
 
 // Create table if it doesn't exist
-db.serialize(() => {
-    db.run(`CREATE TABLE IF NOT EXISTS surfspots (
-        id INTEGER PRIMARY KEY,
-        name TEXT NOT NULL,
-        latitude REAL NOT NULL,
-        longitude REAL NOT NULL,
-        forecast TEXT,
-        image TEXT
-    )`);
-});
+db.prepare(`CREATE TABLE IF NOT EXISTS surfspots (
+    "spot-id" INTEGER PRIMARY KEY,
+    type TEXT,
+    forecast TEXT,
+    description TEXT
+)`).run();
 
-const fs = require('fs');
 
+// Get all regions
 app.get('/api/regions', (req, res) => {
-    db.all("SELECT name, country, region, coordinates, `telegram-link` FROM regions", (err, rows) => {
-        if (err) {
-            res.status(500).json({ error: 'Error reading from database' });
-            console.error('Database error:', err);
-            return;
-        }
+    try {
+        const rows = db.prepare("SELECT `region-id`, name, country, `greater-region`, coordinates, `telegram-link` FROM regions").all();
 
-        try {
-            const regions = rows.map(row => ({
-                name: row.name,
-                country: row.country,
-                region: row.region,
-                coordinates: JSON.parse(row.coordinates), // Parse JSON coordinates
-                telegramLink: row['telegram-link'] // Include the telegram link
-            }));
-            res.json(regions);
-        } catch (error) {
-            res.status(500).json({ error: 'Error parsing region data' });
-            console.error('Parsing error:', error);
-        }
-    });
+        const regions = rows.map(row => ({
+            "region-id": row["region-id"],
+            name: row.name,
+            country: row.country,
+            "greater-region": row["greater-region"],
+            coordinates: JSON.parse(row.coordinates),
+            telegramLink: row["telegram-link"]
+        }));
+
+        res.json(regions);
+    } catch (err) {
+        console.error('Error reading regions:', err);
+        res.status(500).json({ error: 'Error reading from database' });
+    }
 });
 
-
-
-app.get('/api/surfspots', (req, res) => {
-    const showAll = req.query.showAll === '1';
-
-    const query = showAll
-        ? 'SELECT * FROM surfspots'
-        : `SELECT s.* FROM surfspots s
-           JOIN regions r ON s.sub_region = r.name AND s.region = r.region AND s.country = r.country
-           WHERE r.\`telegram-link\` IS NOT NULL AND r.\`telegram-link\` != ''`;
-
-    db.all(query, [], (err, rows) => {
-        if (err) {
-            console.error('Error fetching surf spots:', err);
-            res.status(500).send('Error fetching surf spots');
+// Get surf spot details by spot-id
+app.get('/api/spotdetails', (req, res) => {
+    const spotId = parseInt(req.query.spot_id, 10);
+    if (!spotId) {
+        return res.status(400).json({ error: "Missing or invalid spot_id" });
+    }
+    try {
+        // Use your actual DB column name: id or spot-id
+        const row = db.prepare("SELECT `spot-id`, type, forecast, description FROM surfspots WHERE `spot-id` = ?").get(spotId);
+        if (!row) {
+            return res.status(404).json({ error: "Spot not found" });
+        }
+        // Parse forecast if present
+        if (row.forecast) {
+            try {
+                row.forecast = JSON.parse(row.forecast);
+            } catch {
+                row.forecast = [];
+            }
         } else {
-            const transformedRows = rows.map(spot => ({
-                ...spot,
-                coordinates: { lat: spot.latitude, lng: spot.longitude },
-                forecast: spot.forecast ? JSON.parse(spot.forecast) : []
-            }));
-            res.json(transformedRows);
+            row.forecast = [];
         }
-    });
+        res.json(row);
+    } catch (err) {
+        console.error('Error fetching spot details:', err);
+        res.status(500).json({ error: 'Error fetching spot details' });
+    }
 });
 
+// Get region details by region-id
+app.get('/api/regiondetails', (req, res) => {
+    const regionId = req.query.region_id;
+    if (!regionId) {
+        return res.status(400).json({ error: 'Missing region_id' });
+    }
+    try {
+        const row = db.prepare("SELECT `region-id`, name, country, `greater-region`, coordinates, `telegram-link` as telegram_link FROM regions WHERE `region-id` = ?").get(regionId);
+        if (!row) {
+            return res.status(404).json({ error: 'Region not found' });
+        }
+        row.coordinates = JSON.parse(row.coordinates);
+        res.json(row);
+    } catch (err) {
+        console.error('Error fetching region details:', err);
+        res.status(500).json({ error: 'Error fetching region details' });
+    }
+});
 
+app.get('/surfspots.json', (req, res) => {
+    res.sendFile(path.join(__dirname, 'surfspots.json'));
+});
+
+const customCenters = ['/indonesia', '/california', '/australia'];
+customCenters.forEach(route => {
+    app.get(route, (req, res) => {
+        res.sendFile(path.join(__dirname, 'index.html'));
+    });
+});
 
 // Start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
-
-
