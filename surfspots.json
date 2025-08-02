@@ -365,7 +365,7 @@
   },
   {
     "spot-id": 97,
-    "region-id": null,
+    "region-id": 78,
     "name": "Senggigi",
     "latitude": -8.50293291,
     "longitude": 116.04480743
@@ -2514,7 +2514,7 @@
   },
   {
     "spot-id": 539,
-    "region-id": null,
+    "region-id": 76,
     "name": "Keramas Beach",
     "latitude": -8.59754927,
     "longitude": 115.33908606
@@ -3326,7 +3326,7 @@
   },
   {
     "spot-id": 720,
-    "region-id": null,
+    "region-id": 76,
     "name": "Medewi",
     "latitude": -8.42160232,
     "longitude": 114.80466127
@@ -3431,7 +3431,7 @@
   },
   {
     "spot-id": 742,
-    "region-id": null,
+    "region-id": 80,
     "name": "kerewei right",
     "latitude": -9.76081783,
     "longitude": 119.33151495
@@ -4159,7 +4159,7 @@
   },
   {
     "spot-id": 896,
-    "region-id": null,
+    "region-id": 76,
     "name": "Ewan's Left",
     "latitude": -8.80736478,
     "longitude": 115.23490369
@@ -4383,7 +4383,7 @@
   },
   {
     "spot-id": 950,
-    "region-id": null,
+    "region-id": 76,
     "name": "Dreamland",
     "latitude": -8.79908957,
     "longitude": 115.11708498
@@ -4796,7 +4796,7 @@
   },
   {
     "spot-id": 1039,
-    "region-id": null,
+    "region-id": 80,
     "name": "Nihiwatu",
     "latitude": -9.78142566,
     "longitude": 119.37306404
@@ -4957,7 +4957,7 @@
   },
   {
     "spot-id": 1068,
-    "region-id": null,
+    "region-id": 79,
     "name": "Little Bingin",
     "latitude": -8.84765567,
     "longitude": 116.75975239
@@ -5244,7 +5244,7 @@
   },
   {
     "spot-id": 1130,
-    "region-id": null,
+    "region-id": 80,
     "name": "Erics",
     "latitude": -10.25623573,
     "longitude": 120.57421196
@@ -5923,7 +5923,7 @@
   },
   {
     "spot-id": 1265,
-    "region-id": null,
+    "region-id": 79,
     "name": "Donuts",
     "latitude": -8.91899038,
     "longitude": 116.73770678
@@ -6322,7 +6322,7 @@
   },
   {
     "spot-id": 1364,
-    "region-id": null,
+    "region-id": 83,
     "name": "Timmy Turner's New Left",
     "latitude": -7.7181956,
     "longitude": 107.83304214
@@ -6651,7 +6651,7 @@
   },
   {
     "spot-id": 1435,
-    "region-id": null,
+    "region-id": 76,
     "name": "Pulakan (medewi) Rights",
     "latitude": -8.42493483,
     "longitude": 114.81313705
@@ -7001,7 +7001,7 @@
   },
   {
     "spot-id": 1508,
-    "region-id": null,
+    "region-id": 81,
     "name": "Roti Island - Nembrala - T Land",
     "latitude": -10.89347505,
     "longitude": 122.81181693
@@ -7148,7 +7148,7 @@
   },
   {
     "spot-id": 1536,
-    "region-id": null,
+    "region-id": 76,
     "name": "Bali Tropic",
     "latitude": -8.78482354,
     "longitude": 115.23164749
@@ -7316,7 +7316,7 @@
   },
   {
     "spot-id": 1572,
-    "region-id": null,
+    "region-id": 78,
     "name": "Ekas",
     "latitude": -8.88354525,
     "longitude": 116.45061493
@@ -7764,7 +7764,7 @@
   },
   {
     "spot-id": 1673,
-    "region-id": null,
+    "region-id": 78,
     "name": "Grupuk",
     "latitude": -8.92577375,
     "longitude": 116.3520813
@@ -8114,7 +8114,7 @@
   },
   {
     "spot-id": 1737,
-    "region-id": null,
+    "region-id": 76,
     "name": "Kuta Beach",
     "latitude": -8.71636443,
     "longitude": 115.16693115
@@ -8366,7 +8366,7 @@
   },
   {
     "spot-id": 1785,
-    "region-id": null,
+    "region-id": 82,
     "name": "Red Island",
     "latitude": -8.6051235,
     "longitude": 114.0262413
@@ -8737,7 +8737,7 @@
   },
   {
     "spot-id": 1865,
-    "region-id": null,
+    "region-id": 78,
     "name": "Gili Trawangan",
     "latitude": -8.36012609,
     "longitude": 116.0438633
@@ -9213,7 +9213,7 @@
   },
   {
     "spot-id": 1959,
-    "region-id": null,
+    "region-id": 81,
     "name": "Army Camp",
     "latitude": -10.97949026,
     "longitude": 122.84337473
@@ -9640,7 +9640,7 @@
   },
   {
     "spot-id": 2057,
-    "region-id": null,
+    "region-id": 76,
     "name": "Legian Beach",
     "latitude": -8.69515398,
     "longitude": 115.15809059
@@ -11327,7 +11327,7 @@
   },
   {
     "spot-id": 2410,
-    "region-id": null,
+    "region-id": 83,
     "name": "Pasauran",
     "latitude": -6.23560238,
     "longitude": 105.82503319
@@ -12020,7 +12020,7 @@
   },
   {
     "spot-id": 2565,
-    "region-id": null,
+    "region-id": 76,
     "name": "Nusa dua",
     "latitude": -8.82220774,
     "longitude": 115.22746325
@@ -12167,7 +12167,7 @@
   },
   {
     "spot-id": 2596,
-    "region-id": null,
+    "region-id": 82,
     "name": "Tiger Tracks",
     "latitude": -8.68558768,
     "longitude": 114.37334061
@@ -12594,7 +12594,7 @@
   },
   {
     "spot-id": 2684,
-    "region-id": null,
+    "region-id": 83,
     "name": "Karang Naya",
     "latitude": -6.96807499,
     "longitude": 106.51603568
@@ -12748,7 +12748,7 @@
   },
   {
     "spot-id": 2715,
-    "region-id": null,
+    "region-id": 83,
     "name": "Cimaja",
     "latitude": -6.96290352,
     "longitude": 106.47951365
@@ -13049,7 +13049,7 @@
   },
   {
     "spot-id": 2771,
-    "region-id": null,
+    "region-id": 79,
     "name": "Lakey Peak",
     "latitude": -8.82647922,
     "longitude": 118.38048577
@@ -13567,7 +13567,7 @@
   },
   {
     "spot-id": 2886,
-    "region-id": null,
+    "region-id": 83,
     "name": "Tanjung Lesung",
     "latitude": -6.47786694,
     "longitude": 105.65731198
@@ -13903,7 +13903,7 @@
   },
   {
     "spot-id": 2963,
-    "region-id": null,
+    "region-id": 76,
     "name": "Jimbaran Shorey",
     "latitude": -8.77133631,
     "longitude": 115.15757561
@@ -14204,7 +14204,7 @@
   },
   {
     "spot-id": 3025,
-    "region-id": null,
+    "region-id": 76,
     "name": "Berawa",
     "latitude": -8.66694444,
     "longitude": 115.13861111
@@ -14281,7 +14281,7 @@
   },
   {
     "spot-id": 3042,
-    "region-id": null,
+    "region-id": 83,
     "name": "Ombak Tujuh",
     "latitude": -7.27780395,
     "longitude": 106.36915684
@@ -14386,7 +14386,7 @@
   },
   {
     "spot-id": 3064,
-    "region-id": null,
+    "region-id": 79,
     "name": "Periscopes",
     "latitude": -8.78465389,
     "longitude": 118.35571289
@@ -14554,7 +14554,7 @@
   },
   {
     "spot-id": 3098,
-    "region-id": null,
+    "region-id": 83,
     "name": "Puncher",
     "latitude": -8.27944507,
     "longitude": 111.07452393
@@ -15107,7 +15107,7 @@
   },
   {
     "spot-id": 3207,
-    "region-id": null,
+    "region-id": 76,
     "name": "KU DE TA - Semyniak",
     "latitude": -8.68716794,
     "longitude": 115.15395999
@@ -15275,7 +15275,7 @@
   },
   {
     "spot-id": 3241,
-    "region-id": null,
+    "region-id": 83,
     "name": "Jambu Beach",
     "latitude": -6.19160593,
     "longitude": 105.84194183
@@ -15310,7 +15310,7 @@
   },
   {
     "spot-id": 3251,
-    "region-id": null,
+    "region-id": 80,
     "name": "Sumba - Kallala",
     "latitude": -10.25134379,
     "longitude": 120.57464218
@@ -15366,7 +15366,7 @@
   },
   {
     "spot-id": 3265,
-    "region-id": null,
+    "region-id": 81,
     "name": "T Land Bommie",
     "latitude": -10.88049951,
     "longitude": 122.81313846
@@ -15765,7 +15765,7 @@
   },
   {
     "spot-id": 3350,
-    "region-id": null,
+    "region-id": 76,
     "name": "Balian",
     "latitude": -8.52428147,
     "longitude": 114.98971224
@@ -15835,7 +15835,7 @@
   },
   {
     "spot-id": 3365,
-    "region-id": null,
+    "region-id": 76,
     "name": "Ketewel",
     "latitude": -8.64680027,
     "longitude": 115.28031349
@@ -16276,7 +16276,7 @@
   },
   {
     "spot-id": 3470,
-    "region-id": null,
+    "region-id": 79,
     "name": "Tropical's",
     "latitude": -9.00173882,
     "longitude": 116.73866272
@@ -16451,7 +16451,7 @@
   },
   {
     "spot-id": 3501,
-    "region-id": null,
+    "region-id": 83,
     "name": "Pacitan",
     "latitude": -8.23098603,
     "longitude": 111.10151768
@@ -16913,7 +16913,7 @@
   },
   {
     "spot-id": 3610,
-    "region-id": null,
+    "region-id": 77,
     "name": "Lacerations (Nusa Lembongan)",
     "latitude": -8.67592567,
     "longitude": 115.44075251
@@ -17032,7 +17032,7 @@
   },
   {
     "spot-id": 3639,
-    "region-id": null,
+    "region-id": 76,
     "name": "Green ball",
     "latitude": -8.85148904,
     "longitude": 115.17011762
@@ -17102,7 +17102,7 @@
   },
   {
     "spot-id": 3657,
-    "region-id": null,
+    "region-id": 83,
     "name": "One Palm Point - Panaitan island",
     "latitude": -6.6554004,
     "longitude": 105.17263412
@@ -17697,7 +17697,7 @@
   },
   {
     "spot-id": 3796,
-    "region-id": null,
+    "region-id": 77,
     "name": "Mushroom beach (Nusa Lembongan)",
     "latitude": -8.68163169,
     "longitude": 115.43295264
@@ -17956,7 +17956,7 @@
   },
   {
     "spot-id": 3852,
-    "region-id": null,
+    "region-id": 81,
     "name": "Do'o Island",
     "latitude": -10.83348302,
     "longitude": 122.75302613
@@ -17991,7 +17991,7 @@
   },
   {
     "spot-id": 3857,
-    "region-id": null,
+    "region-id": 78,
     "name": "Mawi",
     "latitude": -8.88774288,
     "longitude": 116.16070569
@@ -18838,7 +18838,7 @@
   },
   {
     "spot-id": 4057,
-    "region-id": null,
+    "region-id": 83,
     "name": "Pasauran Muara ",
     "latitude": -6.23127614,
     "longitude": 105.82988799
@@ -18859,7 +18859,7 @@
   },
   {
     "spot-id": 4060,
-    "region-id": null,
+    "region-id": 83,
     "name": "Sunset",
     "latitude": -6.96124216,
     "longitude": 106.47235215
@@ -19321,7 +19321,7 @@
   },
   {
     "spot-id": 4159,
-    "region-id": null,
+    "region-id": 82,
     "name": "Grajagan",
     "latitude": -8.73428633,
     "longitude": 114.33973789
@@ -20378,7 +20378,7 @@
   },
   {
     "spot-id": 4397,
-    "region-id": null,
+    "region-id": 81,
     "name": "B-point",
     "latitude": -8.82697221,
     "longitude": 125.05249143
@@ -20490,7 +20490,7 @@
   },
   {
     "spot-id": 4423,
-    "region-id": null,
+    "region-id": 77,
     "name": "Ceningan Point",
     "latitude": -8.70355346,
     "longitude": 115.44085979
@@ -21050,7 +21050,7 @@
   },
   {
     "spot-id": 4541,
-    "region-id": null,
+    "region-id": 80,
     "name": "Wanyapu",
     "latitude": -9.63553312,
     "longitude": 119.00485361
@@ -21274,7 +21274,7 @@
   },
   {
     "spot-id": 4593,
-    "region-id": null,
+    "region-id": 81,
     "name": "Boa",
     "latitude": -10.94033065,
     "longitude": 122.84001607
@@ -21701,7 +21701,7 @@
   },
   {
     "spot-id": 4692,
-    "region-id": null,
+    "region-id": 83,
     "name": "Batu Karas",
     "latitude": -7.74824391,
     "longitude": 108.50217819
@@ -22275,7 +22275,7 @@
   },
   {
     "spot-id": 4822,
-    "region-id": null,
+    "region-id": 79,
     "name": "Benete",
     "latitude": -8.89077447,
     "longitude": 116.73576593
@@ -22415,7 +22415,7 @@
   },
   {
     "spot-id": 4854,
-    "region-id": null,
+    "region-id": 76,
     "name": "Uluwatu",
     "latitude": -8.8166311,
     "longitude": 115.08625031
@@ -23479,7 +23479,7 @@
   },
   {
     "spot-id": 5099,
-    "region-id": null,
+    "region-id": 76,
     "name": "Pererenan",
     "latitude": -8.65198277,
     "longitude": 115.12122631
@@ -23906,14 +23906,14 @@
   },
   {
     "spot-id": 5196,
-    "region-id": null,
+    "region-id": 82,
     "name": "20-20s",
     "latitude": -8.70718046,
     "longitude": 114.37447786
   },
   {
     "spot-id": 5197,
-    "region-id": null,
+    "region-id": 78,
     "name": "Sereweh",
     "latitude": -8.44146962,
     "longitude": 116.03416443
@@ -24445,7 +24445,7 @@
   },
   {
     "spot-id": 5310,
-    "region-id": null,
+    "region-id": 78,
     "name": "Desert Point (Bangko-Bangko)",
     "latitude": -8.7509773,
     "longitude": 115.82267761
@@ -24816,7 +24816,7 @@
   },
   {
     "spot-id": 5382,
-    "region-id": null,
+    "region-id": 78,
     "name": "Tanjung A'an",
     "latitude": -8.91822725,
     "longitude": 116.3227272
@@ -25082,7 +25082,7 @@
   },
   {
     "spot-id": 5446,
-    "region-id": null,
+    "region-id": 79,
     "name": "Super Suck",
     "latitude": -8.93594856,
     "longitude": 116.74415588
@@ -25670,7 +25670,7 @@
   },
   {
     "spot-id": 5579,
-    "region-id": null,
+    "region-id": 83,
     "name": "Turtles",
     "latitude": -7.33586512,
     "longitude": 106.39755607
@@ -25901,7 +25901,7 @@
   },
   {
     "spot-id": 5634,
-    "region-id": null,
+    "region-id": 78,
     "name": "Puri's point",
     "latitude": -8.48321734,
     "longitude": 116.03492081
@@ -25971,7 +25971,7 @@
   },
   {
     "spot-id": 5649,
-    "region-id": null,
+    "region-id": 81,
     "name": "CRISTO REI DILI",
     "latitude": -8.52139616,
     "longitude": 125.60744047
@@ -26104,7 +26104,7 @@
   },
   {
     "spot-id": 5677,
-    "region-id": null,
+    "region-id": 76,
     "name": "Padang Galak",
     "latitude": -8.63879199,
     "longitude": 115.29044151
@@ -26517,7 +26517,7 @@
   },
   {
     "spot-id": 5766,
-    "region-id": null,
+    "region-id": 83,
     "name": "Apocalypse",
     "latitude": -6.61464812,
     "longitude": 105.13066292
@@ -27392,7 +27392,7 @@
   },
   {
     "spot-id": 5943,
-    "region-id": null,
+    "region-id": 76,
     "name": "Balangan",
     "latitude": -8.79224555,
     "longitude": 115.1198101
@@ -27581,7 +27581,7 @@
   },
   {
     "spot-id": 5991,
-    "region-id": null,
+    "region-id": 83,
     "name": "National Park",
     "latitude": -6.67992048,
     "longitude": 105.32560587
@@ -27994,7 +27994,7 @@
   },
   {
     "spot-id": 6090,
-    "region-id": null,
+    "region-id": 76,
     "name": "Tandjungs",
     "latitude": -8.69150566,
     "longitude": 115.27130127
@@ -28057,7 +28057,7 @@
   },
   {
     "spot-id": 6106,
-    "region-id": null,
+    "region-id": 83,
     "name": "Sawarna",
     "latitude": -6.98436219,
     "longitude": 106.29555702
@@ -28309,7 +28309,7 @@
   },
   {
     "spot-id": 6156,
-    "region-id": null,
+    "region-id": 83,
     "name": "pangandaran",
     "latitude": -7.69261947,
     "longitude": 108.65409851
@@ -31004,7 +31004,7 @@
   },
   {
     "spot-id": 6744,
-    "region-id": null,
+    "region-id": 81,
     "name": "Dili Rock",
     "latitude": -8.55597104,
     "longitude": 125.49934745
@@ -31186,7 +31186,7 @@
   },
   {
     "spot-id": 6776,
-    "region-id": null,
+    "region-id": 81,
     "name": "Sucky Mamas",
     "latitude": -10.84670164,
     "longitude": 122.81751716
@@ -31375,7 +31375,7 @@
   },
   {
     "spot-id": 6819,
-    "region-id": null,
+    "region-id": 80,
     "name": "Pero",
     "latitude": -9.6093777,
     "longitude": 118.98446774
@@ -31613,7 +31613,7 @@
   },
   {
     "spot-id": 6870,
-    "region-id": null,
+    "region-id": 76,
     "name": "tanjung left",
     "latitude": -8.68131352,
     "longitude": 115.26776075
@@ -32138,7 +32138,7 @@
   },
   {
     "spot-id": 6984,
-    "region-id": null,
+    "region-id": 82,
     "name": "Tiger Tracks Lefts",
     "latitude": -8.68804821,
     "longitude": 114.37284708
@@ -32201,7 +32201,7 @@
   },
   {
     "spot-id": 7000,
-    "region-id": null,
+    "region-id": 76,
     "name": "Nyang-Nyang",
     "latitude": -8.84333333,
     "longitude": 115.10694444
@@ -32453,7 +32453,7 @@
   },
   {
     "spot-id": 7051,
-    "region-id": null,
+    "region-id": 76,
     "name": "Sri Lanka",
     "latitude": -8.78853456,
     "longitude": 115.23259163
@@ -32845,7 +32845,7 @@
   },
   {
     "spot-id": 7127,
-    "region-id": null,
+    "region-id": 83,
     "name": "Karang Haji - OceanQueen Hotel",
     "latitude": -6.957765,
     "longitude": 106.43555224
@@ -33209,7 +33209,7 @@
   },
   {
     "spot-id": 7202,
-    "region-id": null,
+    "region-id": 77,
     "name": "Playgrounds (Nusa Lembongan)",
     "latitude": -8.67824839,
     "longitude": 115.44122458
@@ -33510,7 +33510,7 @@
   },
   {
     "spot-id": 7271,
-    "region-id": null,
+    "region-id": 81,
     "name": "digger",
     "latitude": -9.35647476,
     "longitude": 125.2744925
@@ -33664,7 +33664,7 @@
   },
   {
     "spot-id": 7299,
-    "region-id": null,
+    "region-id": 77,
     "name": "Shipwrecks",
     "latitude": -8.66569598,
     "longitude": 115.44314504
@@ -33972,7 +33972,7 @@
   },
   {
     "spot-id": 7373,
-    "region-id": null,
+    "region-id": 78,
     "name": "Gili air",
     "latitude": -8.36970054,
     "longitude": 116.0760498
@@ -34413,7 +34413,7 @@
   },
   {
     "spot-id": 7478,
-    "region-id": null,
+    "region-id": 76,
     "name": "Serangan",
     "latitude": -8.74096705,
     "longitude": 115.24291277
@@ -34637,7 +34637,7 @@
   },
   {
     "spot-id": 7523,
-    "region-id": null,
+    "region-id": 80,
     "name": "Mengkudu",
     "latitude": -10.31440128,
     "longitude": 120.1552324
@@ -34651,7 +34651,7 @@
   },
   {
     "spot-id": 7525,
-    "region-id": null,
+    "region-id": 76,
     "name": "Airport's",
     "latitude": -8.74512388,
     "longitude": 115.15032291
@@ -34952,7 +34952,7 @@
   },
   {
     "spot-id": 7590,
-    "region-id": null,
+    "region-id": 76,
     "name": "mushrooms",
     "latitude": -8.80038838,
     "longitude": 115.23731232
@@ -35400,7 +35400,7 @@
   },
   {
     "spot-id": 7700,
-    "region-id": null,
+    "region-id": 82,
     "name": "Puger",
     "latitude": -8.38619523,
     "longitude": 113.47306252
@@ -35554,7 +35554,7 @@
   },
   {
     "spot-id": 7729,
-    "region-id": null,
+    "region-id": 78,
     "name": "NOVOTEL",
     "latitude": -8.91071239,
     "longitude": 116.29561543
@@ -36163,14 +36163,14 @@
   },
   {
     "spot-id": 7867,
-    "region-id": null,
+    "region-id": 76,
     "name": "Secret",
     "latitude": -8.59273308,
     "longitude": 115.34813583
   },
   {
     "spot-id": 7868,
-    "region-id": null,
+    "region-id": 81,
     "name": "Dana",
     "latitude": -10.96671333,
     "longitude": 122.84034678
@@ -36534,7 +36534,7 @@
   },
   {
     "spot-id": 7945,
-    "region-id": null,
+    "region-id": 78,
     "name": "Kuta",
     "latitude": -8.90970545,
     "longitude": 116.24569416
@@ -36569,7 +36569,7 @@
   },
   {
     "spot-id": 7952,
-    "region-id": null,
+    "region-id": 83,
     "name": "Sanghyang Island",
     "latitude": -5.95687555,
     "longitude": 105.85395813
@@ -36646,7 +36646,7 @@
   },
   {
     "spot-id": 7970,
-    "region-id": null,
+    "region-id": 79,
     "name": "Periscope Point",
     "latitude": -8.78173594,
     "longitude": 118.37159157
@@ -36968,7 +36968,7 @@
   },
   {
     "spot-id": 8041,
-    "region-id": null,
+    "region-id": 76,
     "name": "Canggu",
     "latitude": -8.66418457,
     "longitude": 115.12624741
@@ -37031,7 +37031,7 @@
   },
   {
     "spot-id": 8054,
-    "region-id": null,
+    "region-id": 82,
     "name": "Payangan",
     "latitude": -8.43429543,
     "longitude": 113.58009338
@@ -37843,7 +37843,7 @@
   },
   {
     "spot-id": 8246,
-    "region-id": null,
+    "region-id": 78,
     "name": "Belongas",
     "latitude": -8.88197642,
     "longitude": 116.03626728
@@ -38571,7 +38571,7 @@
   },
   {
     "spot-id": 8409,
-    "region-id": null,
+    "region-id": 76,
     "name": "padang padang",
     "latitude": -8.81046065,
     "longitude": 115.09940386
@@ -39551,7 +39551,7 @@
   },
   {
     "spot-id": 8622,
-    "region-id": null,
+    "region-id": 80,
     "name": "Sumba - Miller's right",
     "latitude": -9.9543103,
     "longitude": 119.90135193
@@ -39642,7 +39642,7 @@
   },
   {
     "spot-id": 8644,
-    "region-id": null,
+    "region-id": 79,
     "name": "SCAR REEF",
     "latitude": -8.85564463,
     "longitude": 116.75660133
@@ -39796,7 +39796,7 @@
   },
   {
     "spot-id": 8678,
-    "region-id": null,
+    "region-id": 79,
     "name": "Cement Factory",
     "latitude": -8.72718872,
     "longitude": 116.76573265
@@ -40384,7 +40384,7 @@
   },
   {
     "spot-id": 8801,
-    "region-id": null,
+    "region-id": 76,
     "name": "Sanur - Grand Hyatt",
     "latitude": -8.66991198,
     "longitude": 115.26411295
@@ -40412,7 +40412,7 @@
   },
   {
     "spot-id": 8805,
-    "region-id": null,
+    "region-id": 76,
     "name": "Bingin",
     "latitude": -8.80406214,
     "longitude": 115.11333525
@@ -40846,7 +40846,7 @@
   },
   {
     "spot-id": 8891,
-    "region-id": null,
+    "region-id": 76,
     "name": "Kuta Reef",
     "latitude": -8.73048993,
     "longitude": 115.15588045
@@ -40888,7 +40888,7 @@
   },
   {
     "spot-id": 8901,
-    "region-id": null,
+    "region-id": 79,
     "name": "YO-YO'S",
     "latitude": -8.97193968,
     "longitude": 116.72647476
@@ -42323,7 +42323,7 @@
   },
   {
     "spot-id": 9228,
-    "region-id": null,
+    "region-id": 80,
     "name": "Pero right",
     "latitude": -9.60766745,
     "longitude": 118.98479685
@@ -42379,7 +42379,7 @@
   },
   {
     "spot-id": 9238,
-    "region-id": null,
+    "region-id": 76,
     "name": "Impossibles",
     "latitude": -8.8074496,
     "longitude": 115.10850191
