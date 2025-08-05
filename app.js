@@ -3,11 +3,12 @@ const initialCenters = {
     '/indonesia': { lat: -2.5, lng: 118, zoom: 5 },
     '/california': { lat: 36.7783, lng: -119.4179, zoom: 6 },
     '/australia': { lat: -25.2744, lng: 133.7751, zoom: 5 },
+    '/earth': { lat: 20.0, lng: 0.0, zoom: 2 }, 
     // add more as needed
 };
 
 const path = window.location.pathname.toLowerCase();
-const center = initialCenters[path] || { lat: 40.1795, lng: -74.0327, zoom: 6 };
+const center = initialCenters[path] || { lat: 20.0, lng: 0.0, zoom: 2 };
 
 // Initialize the Leaflet map with custom bounds and no wrap
 const map = L.map('map', {
@@ -289,12 +290,7 @@ fetch('/surfspots.json')
         // Only show all if showAll is true
         surfSpots = showAll
             ? data
-            : data.filter(spot =>
-                spot["region-id"] !== null &&
-                spot["region-id"] !== undefined &&
-                spot["region-id"] !== "" &&
-                !isNaN(spot["region-id"])
-            );
+            : data.filter(spot => spot.visible === true);
         updateMarkers();
         document.getElementById('loading-overlay').style.display = 'none';
     })

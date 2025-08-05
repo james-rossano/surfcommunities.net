@@ -8,13 +8,13 @@ json_file = "surfspots.json"
 
 # New region details
 new_region = {
-    "name": "North Sumatra",
+    "name": "Pulau / Tuangku Islands",
     "country": "Indonesia",
     "greater-region": "",
     "coordinates": [
         {
-            "point1": "-8.775412567704178, 111.73397921025754",
-            "point2": "-5.754571401065229, 104.90048311650754"
+            "point1": "1.8130493945940251, 97.56408691406251",
+            "point2": "3.0433754275297793, 95.59204101562501"
         }
     ],
     "telegram-link": "",
