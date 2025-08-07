@@ -1,41 +1,80 @@
 const express = require('express');
-const Database = require('better-sqlite3');
 const path = require('path');
 const fs = require('fs');
+const initSqlJs = require('sql.js');
 
 const app = express();
 const port = process.env.PORT || 3000;
+let db = null;
 
 // Serve static files from the project directory
 app.use(express.static(path.join(__dirname)));
 
 // Initialize SQLite database
-const db = new Database('./surf_data.db');
-
-// Create table if it doesn't exist
-db.prepare(`CREATE TABLE IF NOT EXISTS surfspots (
-    "spot-id" INTEGER PRIMARY KEY,
-    type TEXT,
-    forecast TEXT,
-    description TEXT
-)`).run();
-
+async function initDatabase() {
+    try {
+        const SQL = await initSqlJs();
+        
+        // Check if database file exists
+        if (fs.existsSync('./surf_data.db')) {
+            const fileBuffer = fs.readFileSync('./surf_data.db');
+            db = new SQL.Database(fileBuffer);
+        } else {
+            db = new SQL.Database();
+            
+            // Create table if it doesn't exist
+            db.run(`CREATE TABLE IF NOT EXISTS surfspots (
+                "spot-id" INTEGER PRIMARY KEY,
+                type TEXT,
+                forecast TEXT,
+                description TEXT
+            )`);
+            
+            // Create regions table if needed
+            db.run(`CREATE TABLE IF NOT EXISTS regions (
+                "region-id" INTEGER PRIMARY KEY,
+                name TEXT,
+                country TEXT,
+                "greater-region" TEXT,
+                coordinates TEXT,
+                "telegram-link" TEXT
+            )`);
+            
+            // Save the database
+            const data = db.export();
+            fs.writeFileSync('./surf_data.db', data);
+        }
+        
+        console.log('Database initialized successfully');
+    } catch (error) {
+        console.error('Error initializing database:', error);
+    }
+}
 
 // Get all regions
 app.get('/api/regions', (req, res) => {
     try {
-        const rows = db.prepare("SELECT `region-id`, name, country, `greater-region`, coordinates, `telegram-link` FROM regions").all();
-
-        const regions = rows.map(row => ({
-            "region-id": row["region-id"],
-            name: row.name,
-            country: row.country,
-            "greater-region": row["greater-region"],
-            coordinates: JSON.parse(row.coordinates),
-            telegramLink: row["telegram-link"]
-        }));
-
-        res.json(regions);
+        if (!db) {
+            return res.status(500).json({ error: 'Database not initialized' });
+        }
+        
+        const stmt = db.prepare("SELECT `region-id`, name, country, `greater-region`, coordinates, `telegram-link` FROM regions");
+        const rows = [];
+        
+        while (stmt.step()) {
+            const row = stmt.getAsObject();
+            rows.push({
+                "region-id": row["region-id"],
+                name: row.name,
+                country: row.country,
+                "greater-region": row["greater-region"],
+                coordinates: row.coordinates ? JSON.parse(row.coordinates) : [],
+                telegramLink: row["telegram-link"]
+            });
+        }
+        
+        stmt.free();
+        res.json(rows);
     } catch (err) {
         console.error('Error reading regions:', err);
         res.status(500).json({ error: 'Error reading from database' });
@@ -48,23 +87,35 @@ app.get('/api/spotdetails', (req, res) => {
     if (!spotId) {
         return res.status(400).json({ error: "Missing or invalid spot_id" });
     }
+    
     try {
-        // Use your actual DB column name: id or spot-id
-        const row = db.prepare("SELECT `spot-id`, type, forecast, description FROM surfspots WHERE `spot-id` = ?").get(spotId);
-        if (!row) {
-            return res.status(404).json({ error: "Spot not found" });
+        if (!db) {
+            return res.status(500).json({ error: 'Database not initialized' });
         }
-        // Parse forecast if present
-        if (row.forecast) {
-            try {
-                row.forecast = JSON.parse(row.forecast);
-            } catch {
+        
+        const stmt = db.prepare("SELECT `spot-id`, type, forecast, description FROM surfspots WHERE `spot-id` = ?");
+        stmt.bind([spotId]);
+        
+        if (stmt.step()) {
+            const row = stmt.getAsObject();
+            
+            // Parse forecast if present
+            if (row.forecast) {
+                try {
+                    row.forecast = JSON.parse(row.forecast);
+                } catch {
+                    row.forecast = [];
+                }
+            } else {
                 row.forecast = [];
             }
+            
+            stmt.free();
+            res.json(row);
         } else {
-            row.forecast = [];
+            stmt.free();
+            res.status(404).json({ error: "Spot not found" });
         }
-        res.json(row);
     } catch (err) {
         console.error('Error fetching spot details:', err);
         res.status(500).json({ error: 'Error fetching spot details' });
@@ -77,13 +128,24 @@ app.get('/api/regiondetails', (req, res) => {
     if (!regionId) {
         return res.status(400).json({ error: 'Missing region_id' });
     }
+    
     try {
-        const row = db.prepare("SELECT `region-id`, name, country, `greater-region`, coordinates, `telegram-link` as telegram_link FROM regions WHERE `region-id` = ?").get(regionId);
-        if (!row) {
-            return res.status(404).json({ error: 'Region not found' });
+        if (!db) {
+            return res.status(500).json({ error: 'Database not initialized' });
         }
-        row.coordinates = JSON.parse(row.coordinates);
-        res.json(row);
+        
+        const stmt = db.prepare("SELECT `region-id`, name, country, `greater-region`, coordinates, `telegram-link` as telegram_link FROM regions WHERE `region-id` = ?");
+        stmt.bind([regionId]);
+        
+        if (stmt.step()) {
+            const row = stmt.getAsObject();
+            row.coordinates = row.coordinates ? JSON.parse(row.coordinates) : [];
+            stmt.free();
+            res.json(row);
+        } else {
+            stmt.free();
+            res.status(404).json({ error: 'Region not found' });
+        }
     } catch (err) {
         console.error('Error fetching region details:', err);
         res.status(500).json({ error: 'Error fetching region details' });
@@ -101,7 +163,9 @@ customCenters.forEach(route => {
     });
 });
 
-// Start the server
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+// Initialize database then start server
+initDatabase().then(() => {
+    app.listen(port, () => {
+        console.log(`Server running at http://localhost:${port}`);
+    });
 });

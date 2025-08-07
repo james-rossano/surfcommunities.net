@@ -20,11 +20,10 @@
   },
   "homepage": "https://github.com/james-rossano/surfcommunity.net#readme",
   "dependencies": {
-    "sqlite3": "^5.1.7",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "express-rate-limit": "^7.4.1",
-    "mongodb": "^6.9.0"
+    "sql.js": "^1.10.3"
   },
   "engines": {
     "node": ">=20"
