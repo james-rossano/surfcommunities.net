@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "minify-css": "npx --yes cleancss -o build/style.min.css style.css",
-    "minify-js": "terser app.js server.js --compress --mangle --output build/app.min.js",
-    "build": "npm run minify-css && npm run minify-js"
+    "minify-css": "./node_modules/.bin/cleancss -o build/style.min.css style.css",
+    "minify-js": "./node_modules/.bin/terser app.js server.js --compress --mangle --output build/app.min.js",
+    "build": "mkdir -p build && npm run minify-css && npm run minify-js"
   },
   "repository": {
     "type": "git",
