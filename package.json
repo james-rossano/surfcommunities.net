@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "echo 'Build completed - skipping minification for now'"
+    "build": "echo 'Build completed - skipping minification for now'",
+    "postinstall": "npm rebuild better-sqlite3"
   },
   "repository": {
     "type": "git",
@@ -21,11 +22,10 @@
   "homepage": "https://github.com/james-rossano/surfcommunity.net#readme",
   "dependencies": {
     "better-sqlite3": "^12.2.0",
-    "clean-css-cli": "^5.6.3",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "express-rate-limit": "^7.4.1",
-    "terser": "^5.34.1"
+    "mongodb": "^6.9.0"
   },
   "engines": {
     "node": ">=20"
