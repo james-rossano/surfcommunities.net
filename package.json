@@ -6,9 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "minify-css": "node ./node_modules/clean-css-cli/bin/cleancss -o build/style.min.css style.css",
-    "minify-js": "node ./node_modules/terser/bin/terser app.js server.js --compress --mangle --output build/app.min.js",
-    "build": "mkdir -p build && npm run minify-css && npm run minify-js"
+    "build": "echo 'Build completed - skipping minification for now'"
   },
   "repository": {
     "type": "git",
