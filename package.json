@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "minify-css": "npx cleancss -o build/style.min.css style.css",
-    "minify-js": "npx terser script.js -o build/script.min.js",
+    "minify-css": "npx --yes cleancss -o build/style.min.css style.css",
+    "minify-js": "terser app.js server.js --compress --mangle --output build/app.min.js",
     "build": "npm run minify-css && npm run minify-js"
   },
   "repository": {
