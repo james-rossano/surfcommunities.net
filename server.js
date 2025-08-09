@@ -163,6 +163,11 @@ customCenters.forEach(route => {
     });
 });
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+
 // Initialize database then start server
 initDatabase().then(() => {
     app.listen(port, '0.0.0.0', () => {
