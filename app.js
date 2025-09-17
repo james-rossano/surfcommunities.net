@@ -9,7 +9,7 @@ const initialCenters = {
 
 const path = window.location.pathname.toLowerCase();
 //const center = initialCenters[path] || { lat: 20.0, lng: 0.0, zoom: 2 };
-const center = initialCenters[path] || { lat: -2.5, lng: 118, zoom: 4};
+const center = initialCenters[path] || { lat: 40, lng: -70, zoom: 5};
 // Initialize the Leaflet map with custom bounds and no wrap
 const map = L.map('map', {
     worldCopyJump: false,

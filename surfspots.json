@@ -373,7 +373,7 @@
     "name": "Ruggles",
     "latitude": 41.46801519,
     "longitude": -71.29622698,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 86,
@@ -469,7 +469,7 @@
     "name": "L.B.I - 82st",
     "latitude": 39.60791997,
     "longitude": -74.20257211,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 107,
@@ -485,7 +485,7 @@
     "name": "Beauregard",
     "latitude": 34.02652147,
     "longitude": -77.89409637,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 109,
@@ -557,7 +557,7 @@
     "name": "Holly Beach",
     "latitude": 29.77050542,
     "longitude": -93.46180916,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 125,
@@ -685,7 +685,7 @@
     "name": "Second Street",
     "latitude": 39.1814497,
     "longitude": -74.67133641,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 149,
@@ -845,7 +845,7 @@
     "name": "FA's",
     "latitude": 29.85897568,
     "longitude": -81.26629829,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 180,
@@ -1005,7 +1005,7 @@
     "name": "The Cove -  Delaware",
     "latitude": 38.77737257,
     "longitude": -75.0844717,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 206,
@@ -1157,7 +1157,7 @@
     "name": "Cape May Ave.",
     "latitude": 39.68971919,
     "longitude": -74.14284468,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 235,
@@ -1285,7 +1285,7 @@
     "name": "Sands",
     "latitude": 40.37097228,
     "longitude": -73.97362947,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 261,
@@ -1301,7 +1301,7 @@
     "name": "Jones Beach",
     "latitude": 40.58886299,
     "longitude": -73.73036385,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 264,
@@ -1445,7 +1445,7 @@
     "name": "38th St. Beach",
     "latitude": 39.38791729,
     "longitude": -74.38632488,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 288,
@@ -1597,7 +1597,7 @@
     "name": "Tobay beach",
     "latitude": 40.60859423,
     "longitude": -73.429479,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 316,
@@ -1637,7 +1637,7 @@
     "name": "Avalon - 15th Street",
     "latitude": 39.10260721,
     "longitude": -74.70912337,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 324,
@@ -1957,7 +1957,7 @@
     "name": "Coastguards",
     "latitude": 40.63245395,
     "longitude": -73.32481384,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 376,
@@ -2077,7 +2077,7 @@
     "name": "Holmes beach pier",
     "latitude": 27.49726099,
     "longitude": -82.71413058,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 395,
@@ -2365,7 +2365,7 @@
     "name": "Tower Road",
     "latitude": 38.67807255,
     "longitude": -75.07026672,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 452,
@@ -2741,7 +2741,7 @@
     "name": "Diamond Beach",
     "latitude": 38.96726714,
     "longitude": -74.83277321,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 509,
@@ -2853,7 +2853,7 @@
     "name": "Ogunquit Rivermouth",
     "latitude": 43.24928211,
     "longitude": -70.59468985,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 534,
@@ -2861,7 +2861,7 @@
     "name": "Peanuts",
     "latitude": 29.70641248,
     "longitude": -81.22284651,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 538,
@@ -2893,7 +2893,7 @@
     "name": "Stumps",
     "latitude": 27.11531086,
     "longitude": -80.14105797,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 542,
@@ -3101,7 +3101,7 @@
     "name": "Emerald Isle",
     "latitude": 34.660497,
     "longitude": -77.034036,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 580,
@@ -3269,7 +3269,7 @@
     "name": "Calle Hermosa",
     "latitude": 30.34026893,
     "longitude": -87.08729267,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 609,
@@ -3277,7 +3277,7 @@
     "name": "Damneck Naval Base",
     "latitude": 36.78185232,
     "longitude": -75.95615745,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 611,
@@ -3509,7 +3509,7 @@
     "name": "Delray public beach",
     "latitude": 26.45846166,
     "longitude": -80.05752325,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 660,
@@ -3517,7 +3517,7 @@
     "name": "The Cross (Pensacola Beach)",
     "latitude": 30.32851918,
     "longitude": -87.15825252,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 662,
@@ -3589,7 +3589,7 @@
     "name": "Buccaneer",
     "latitude": 28.1780728,
     "longitude": -80.58977008,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 676,
@@ -4061,7 +4061,7 @@
     "name": "Fenway",
     "latitude": 41.32834147,
     "longitude": -71.76179945,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 764,
@@ -4133,7 +4133,7 @@
     "name": "Great Egg Harbor Inlet (Longport)",
     "latitude": 39.30375911,
     "longitude": -74.5383203,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 778,
@@ -4213,7 +4213,7 @@
     "name": "The Box",
     "latitude": 40.13036138,
     "longitude": -74.02729511,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 792,
@@ -4349,7 +4349,7 @@
     "name": "Hatteras Light House",
     "latitude": 35.22840853,
     "longitude": -75.52752972,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 813,
@@ -4461,7 +4461,7 @@
     "name": "Cisco Beach (Nantucket Island)",
     "latitude": 41.25238716,
     "longitude": -70.1567173,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 835,
@@ -4837,7 +4837,7 @@
     "name": "Ocean City",
     "latitude": 38.40383243,
     "longitude": -75.07266998,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 917,
@@ -4965,7 +4965,7 @@
     "name": "48th Street (Ocean City)",
     "latitude": 38.37323043,
     "longitude": -75.06695151,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 940,
@@ -5029,7 +5029,7 @@
     "name": "Margate Pier",
     "latitude": 39.32742607,
     "longitude": -74.49447155,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 953,
@@ -5037,7 +5037,7 @@
     "name": "Kennebunk beach",
     "latitude": 43.34943053,
     "longitude": -70.47394753,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 955,
@@ -5157,7 +5157,7 @@
     "name": "Ponquogue- the bowl",
     "latitude": 40.84035627,
     "longitude": -72.47958541,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 982,
@@ -5189,7 +5189,7 @@
     "name": "BP",
     "latitude": 40.72117682,
     "longitude": -72.89744139,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 988,
@@ -5205,7 +5205,7 @@
     "name": "Refish Island",
     "latitude": 29.51797765,
     "longitude": -94.8912549,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 990,
@@ -5253,7 +5253,7 @@
     "name": "Flukies",
     "latitude": 39.30687435,
     "longitude": -74.55674171,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 999,
@@ -5413,7 +5413,7 @@
     "name": "Carolina Beach",
     "latitude": 34.03942253,
     "longitude": -77.88772345,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1030,
@@ -5477,7 +5477,7 @@
     "name": "Holden Beach",
     "latitude": 33.90832023,
     "longitude": -78.32187653,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1039,
@@ -5933,7 +5933,7 @@
     "name": "Walton Rocks",
     "latitude": 27.36579139,
     "longitude": -80.24828196,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1122,
@@ -5973,7 +5973,7 @@
     "name": "Nags Head",
     "latitude": 35.9511909,
     "longitude": -75.61941147,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1127,
@@ -6093,7 +6093,7 @@
     "name": "St. Andrews State Park",
     "latitude": 30.12545623,
     "longitude": -85.73498726,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1145,
@@ -6149,7 +6149,7 @@
     "name": "Dewey Beach",
     "latitude": 38.6979034,
     "longitude": -75.0715971,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1152,
@@ -6253,7 +6253,7 @@
     "name": "Duval Street",
     "latitude": 27.94868212,
     "longitude": -80.49786687,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1174,
@@ -6309,7 +6309,7 @@
     "name": "Terrace",
     "latitude": 41.03318016,
     "longitude": -71.93729639,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1185,
@@ -6389,7 +6389,7 @@
     "name": "Granada",
     "latitude": 29.29235011,
     "longitude": -81.03867531,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1201,
@@ -6477,7 +6477,7 @@
     "name": "Cherry Grove Pier",
     "latitude": 33.83006099,
     "longitude": -78.63272309,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1218,
@@ -6605,7 +6605,7 @@
     "name": "Seacrest Drive",
     "latitude": 39.98675915,
     "longitude": -74.06275928,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1241,
@@ -6685,7 +6685,7 @@
     "name": "The Jetty",
     "latitude": 39.37409321,
     "longitude": -74.40340519,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1254,
@@ -6709,7 +6709,7 @@
     "name": "Galveston",
     "latitude": 29.26500533,
     "longitude": -94.82617378,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1257,
@@ -6805,7 +6805,7 @@
     "name": "Fire Island Point of Woods",
     "latitude": 40.6495177,
     "longitude": -73.12826157,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1274,
@@ -6893,7 +6893,7 @@
     "name": "Loch Arbor,Darlington,Deal",
     "latitude": 40.23885025,
     "longitude": -73.99103165,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1293,
@@ -7245,7 +7245,7 @@
     "name": "Chodes",
     "latitude": 39.1822564,
     "longitude": -74.67020988,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1367,
@@ -7797,7 +7797,7 @@
     "name": "cape lookout",
     "latitude": 34.59478059,
     "longitude": -76.53900146,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1471,
@@ -7805,7 +7805,7 @@
     "name": "Crossroads",
     "latitude": 30.16213429,
     "longitude": -81.35565877,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1473,
@@ -7845,7 +7845,7 @@
     "name": "42nd St. VA Beach",
     "latitude": 36.87093515,
     "longitude": -75.98200321,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1481,
@@ -7877,7 +7877,7 @@
     "name": "Rehoboth - Main",
     "latitude": 38.71525089,
     "longitude": -75.07781982,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1485,
@@ -8029,7 +8029,7 @@
     "name": "Lake Worth Pier",
     "latitude": 26.61214562,
     "longitude": -80.03534675,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1513,
@@ -8125,7 +8125,7 @@
     "name": "17th Ave",
     "latitude": 30.33508352,
     "longitude": -87.11486578,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1529,
@@ -8245,7 +8245,7 @@
     "name": "Plaice Cove",
     "latitude": 42.94659085,
     "longitude": -70.78671455,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1550,
@@ -8973,7 +8973,7 @@
     "name": "The Pass(Amazons)",
     "latitude": 30.12545,
     "longitude": -85.73498333,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1689,
@@ -9061,7 +9061,7 @@
     "name": "Venice North Jetty",
     "latitude": 27.11311443,
     "longitude": -82.46930122,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1703,
@@ -9285,7 +9285,7 @@
     "name": "Dania  Beach",
     "latitude": 26.05800454,
     "longitude": -80.10883391,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1739,
@@ -9309,7 +9309,7 @@
     "name": "Wooden Jetty",
     "latitude": 39.53096846,
     "longitude": -74.26261067,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1742,
@@ -9965,7 +9965,7 @@
     "name": "Matanzas Inlet",
     "latitude": 29.70743755,
     "longitude": -81.22509956,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1863,
@@ -10125,7 +10125,7 @@
     "name": "Surfside",
     "latitude": 28.94108711,
     "longitude": -95.2927494,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1885,
@@ -10365,7 +10365,7 @@
     "name": "Seabrook Beach",
     "latitude": 42.88675037,
     "longitude": -70.81847191,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1933,
@@ -10405,7 +10405,7 @@
     "name": "Loch Arbor",
     "latitude": 40.23096287,
     "longitude": -73.99598837,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1942,
@@ -10597,7 +10597,7 @@
     "name": "Point o' Woods",
     "latitude": 40.6495177,
     "longitude": -73.12830448,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 1970,
@@ -10893,7 +10893,7 @@
     "name": "New New Inlet",
     "latitude": 35.68140487,
     "longitude": -75.48026919,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2034,
@@ -10965,7 +10965,7 @@
     "name": "Fort Walton Pier",
     "latitude": 30.39360718,
     "longitude": -86.60093307,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2050,
@@ -11037,7 +11037,7 @@
     "name": "Indian Rocks Beach",
     "latitude": 27.89393565,
     "longitude": -82.84824371,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2061,
@@ -11045,7 +11045,7 @@
     "name": "8th Ave n.",
     "latitude": 33.77021136,
     "longitude": -78.77030969,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2067,
@@ -11253,7 +11253,7 @@
     "name": "7th Avenue",
     "latitude": 30.29619343,
     "longitude": -81.38904154,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2099,
@@ -11781,7 +11781,7 @@
     "name": "Fourchon",
     "latitude": 29.08672048,
     "longitude": -90.22206545,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2199,
@@ -11845,7 +11845,7 @@
     "name": "Tybee - South End Sand Bar",
     "latitude": 31.98698491,
     "longitude": -80.84725142,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2214,
@@ -11909,7 +11909,7 @@
     "name": "Corpus Christi",
     "latitude": 27.6151018,
     "longitude": -97.20016479,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2223,
@@ -11989,7 +11989,7 @@
     "name": "allerton point",
     "latitude": 42.30702254,
     "longitude": -70.8819437,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2238,
@@ -12421,7 +12421,7 @@
     "name": "Backyard OG (ocean gallery)",
     "latitude": 29.81127346,
     "longitude": -81.26104116,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2317,
@@ -12893,7 +12893,7 @@
     "name": "Reef Road",
     "latitude": 26.76339132,
     "longitude": -80.03758907,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2400,
@@ -12901,7 +12901,7 @@
     "name": "Assateague",
     "latitude": 38.20689271,
     "longitude": -75.14674187,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2401,
@@ -13029,7 +13029,7 @@
     "name": "Monahans Dock",
     "latitude": 41.4224299,
     "longitude": -71.45430297,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2428,
@@ -13061,7 +13061,7 @@
     "name": "Dutches Wedge",
     "latitude": 39.31197134,
     "longitude": -74.53988671,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2437,
@@ -13085,7 +13085,7 @@
     "name": "Spoils",
     "latitude": 26.09486744,
     "longitude": -80.1046899,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2441,
@@ -13189,7 +13189,7 @@
     "name": "Flagler",
     "latitude": 29.48052304,
     "longitude": -81.12463474,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2463,
@@ -13357,7 +13357,7 @@
     "name": "St. George Island",
     "latitude": 29.65673095,
     "longitude": -84.88140106,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2495,
@@ -13365,7 +13365,7 @@
     "name": "D-Country",
     "latitude": 29.81570913,
     "longitude": -81.26146227,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2496,
@@ -13405,7 +13405,7 @@
     "name": "Matagorda",
     "latitude": 28.59674963,
     "longitude": -95.97673416,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2502,
@@ -13581,7 +13581,7 @@
     "name": "92nd Street",
     "latitude": 40.58333064,
     "longitude": -73.8120532,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2532,
@@ -13757,7 +13757,7 @@
     "name": "Fox Hill",
     "latitude": 42.96369709,
     "longitude": -70.76808393,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2573,
@@ -13781,7 +13781,7 @@
     "name": "Painter's Hill",
     "latitude": 29.53179435,
     "longitude": -81.151371,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2576,
@@ -13829,7 +13829,7 @@
     "name": "Manasquan Inlet",
     "latitude": 40.10267044,
     "longitude": -74.03275609,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2583,
@@ -13837,7 +13837,7 @@
     "name": "Democrat Point (Robert Moses)",
     "latitude": 40.62021773,
     "longitude": -73.30659896,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2584,
@@ -13845,7 +13845,7 @@
     "name": "R.C.'s",
     "latitude": 28.1780728,
     "longitude": -80.58977544,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2585,
@@ -13853,7 +13853,7 @@
     "name": "Packery Channel",
     "latitude": 27.61609049,
     "longitude": -97.20016479,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2586,
@@ -14149,7 +14149,7 @@
     "name": "Cliffs",
     "latitude": 32.73164234,
     "longitude": -79.86920536,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2644,
@@ -14325,7 +14325,7 @@
     "name": "Mainstreet pier",
     "latitude": 29.22724685,
     "longitude": -81.00508869,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2671,
@@ -14517,7 +14517,7 @@
     "name": "Tices Sholls",
     "latitude": 39.84676719,
     "longitude": -74.08493042,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2707,
@@ -14629,7 +14629,7 @@
     "name": "Monster hole",
     "latitude": 27.86631965,
     "longitude": -80.4297924,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2726,
@@ -14637,7 +14637,7 @@
     "name": "Stuart Rocks",
     "latitude": 27.19021702,
     "longitude": -80.16100824,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2727,
@@ -15261,7 +15261,7 @@
     "name": "The Mayport Poles",
     "latitude": 30.38276046,
     "longitude": -81.39221191,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2836,
@@ -15285,7 +15285,7 @@
     "name": "Tuckerman's",
     "latitude": 41.47686997,
     "longitude": -71.27505898,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2840,
@@ -15309,7 +15309,7 @@
     "name": "Port st.joe cape",
     "latitude": 29.81205077,
     "longitude": -85.30274391,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2844,
@@ -15397,7 +15397,7 @@
     "name": "Egypt beach",
     "latitude": 42.22063604,
     "longitude": -70.74465752,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2863,
@@ -15461,7 +15461,7 @@
     "name": "Spessard holland",
     "latitude": 28.0550289,
     "longitude": -80.55097461,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2877,
@@ -15621,7 +15621,7 @@
     "name": "36th Street",
     "latitude": 39.15717812,
     "longitude": -74.68589544,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2911,
@@ -15709,7 +15709,7 @@
     "name": "Playa Linda",
     "latitude": 28.66997186,
     "longitude": -80.6420356,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2925,
@@ -15909,7 +15909,7 @@
     "name": "Coast Guard beach",
     "latitude": 41.84621153,
     "longitude": -69.94819164,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 2967,
@@ -16397,7 +16397,7 @@
     "name": "Okaloosa Pier",
     "latitude": 30.39049766,
     "longitude": -86.59342289,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3058,
@@ -16861,7 +16861,7 @@
     "name": "Nantasket Beach",
     "latitude": 42.26983051,
     "longitude": -70.85426331,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3134,
@@ -16965,7 +16965,7 @@
     "name": "Spanish River",
     "latitude": 26.38632661,
     "longitude": -80.06644696,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3156,
@@ -17037,7 +17037,7 @@
     "name": "Peggoty",
     "latitude": 42.18918041,
     "longitude": -70.71616173,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3169,
@@ -17597,7 +17597,7 @@
     "name": "Road K",
     "latitude": 40.83285057,
     "longitude": -72.51146078,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3273,
@@ -17741,7 +17741,7 @@
     "name": "Brace Cove",
     "latitude": 42.5870557,
     "longitude": -70.64805508,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3304,
@@ -17885,7 +17885,7 @@
     "name": "Middle Access",
     "latitude": 30.08424587,
     "longitude": -81.3368082,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3329,
@@ -18069,7 +18069,7 @@
     "name": "St. Augustine beach pier",
     "latitude": 29.85730084,
     "longitude": -81.26513958,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3360,
@@ -18277,7 +18277,7 @@
     "name": "Sand Key Park",
     "latitude": 27.95111781,
     "longitude": -82.83305168,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3411,
@@ -18341,7 +18341,7 @@
     "name": "35th Street, IOP",
     "latitude": 32.79524749,
     "longitude": -79.76688981,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3422,
@@ -18493,7 +18493,7 @@
     "name": "Indian River Inlet",
     "latitude": 38.60843684,
     "longitude": -75.0592804,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3452,
@@ -18701,7 +18701,7 @@
     "name": "5th Street Beach Haven",
     "latitude": 39.5644284,
     "longitude": -74.23316002,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3485,
@@ -18797,7 +18797,7 @@
     "name": "Pavilion Ave, Long Branch",
     "latitude": 40.2973012,
     "longitude": -73.97946596,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3501,
@@ -18997,7 +18997,7 @@
     "name": "Cumberland Island",
     "latitude": 30.74390125,
     "longitude": -81.46259308,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3540,
@@ -19045,7 +19045,7 @@
     "name": "Robert Moses (democrat point)",
     "latitude": 40.62027627,
     "longitude": -73.30668211,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3551,
@@ -19069,7 +19069,7 @@
     "name": "Point Judith Lighthouse",
     "latitude": 41.35935233,
     "longitude": -71.48537636,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3556,
@@ -19101,7 +19101,7 @@
     "name": "Boca Inlet",
     "latitude": 26.33523482,
     "longitude": -80.07047296,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3563,
@@ -19261,7 +19261,7 @@
     "name": "Sandbridge",
     "latitude": 36.69416272,
     "longitude": -75.92228651,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3598,
@@ -19373,7 +19373,7 @@
     "name": "Jap Rock",
     "latitude": 26.39239345,
     "longitude": -80.06541163,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3619,
@@ -19437,7 +19437,7 @@
     "name": "Fort Lauderdale - 14th Street",
     "latitude": 26.14574957,
     "longitude": -80.10140419,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3635,
@@ -19557,7 +19557,7 @@
     "name": "Good Harbor Beach",
     "latitude": 42.61995468,
     "longitude": -70.63151121,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3660,
@@ -19629,7 +19629,7 @@
     "name": "Georgica pond",
     "latitude": 40.93192276,
     "longitude": -72.22953916,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3675,
@@ -19661,7 +19661,7 @@
     "name": "Cupsogue beach",
     "latitude": 40.77209188,
     "longitude": -72.73026466,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3684,
@@ -19821,7 +19821,7 @@
     "name": "The Washout",
     "latitude": 32.66881366,
     "longitude": -79.90804911,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3720,
@@ -19933,7 +19933,7 @@
     "name": "Phillips Pump House",
     "latitude": 40.25401633,
     "longitude": -73.98912191,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3747,
@@ -20197,7 +20197,7 @@
     "name": "LBI - Long Beach Island",
     "latitude": 39.65857057,
     "longitude": -74.15977478,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3790,
@@ -20269,7 +20269,7 @@
     "name": "Corners",
     "latitude": 30.63849444,
     "longitude": -81.43599167,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3806,
@@ -20557,7 +20557,7 @@
     "name": "Myrtle Beach 67th",
     "latitude": 33.73647459,
     "longitude": -78.82325649,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3857,
@@ -20573,7 +20573,7 @@
     "name": "Rhodanthe Pier",
     "latitude": 35.58532808,
     "longitude": -75.46094656,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3860,
@@ -20733,7 +20733,7 @@
     "name": "Myrtle Beach 64th Ave.",
     "latitude": 33.73455631,
     "longitude": -78.82626057,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3894,
@@ -20901,7 +20901,7 @@
     "name": "Wells Beach",
     "latitude": 43.30406951,
     "longitude": -70.56213856,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 3927,
@@ -21261,7 +21261,7 @@
     "name": "2nd Light",
     "latitude": 28.25273573,
     "longitude": -80.60333133,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4006,
@@ -21437,7 +21437,7 @@
     "name": "Panic Point",
     "latitude": 41.32485283,
     "longitude": -71.75198793,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4041,
@@ -21445,7 +21445,7 @@
     "name": "St. Marys rivermouth",
     "latitude": 30.70036823,
     "longitude": -81.42856121,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4043,
@@ -21709,7 +21709,7 @@
     "name": "Surf City Pier",
     "latitude": 34.42553172,
     "longitude": -77.54480839,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4088,
@@ -21821,7 +21821,7 @@
     "name": "Montauk point - Turtles",
     "latitude": 41.06987203,
     "longitude": -71.85748458,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4107,
@@ -21853,7 +21853,7 @@
     "name": "Anna Maria Island - Beach Streets",
     "latitude": 27.53278159,
     "longitude": -82.74318695,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4114,
@@ -21877,7 +21877,7 @@
     "name": "Narragansett Town Beach",
     "latitude": 41.43732158,
     "longitude": -71.4516449,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4119,
@@ -21885,7 +21885,7 @@
     "name": "1st Street Jetty",
     "latitude": 36.83041288,
     "longitude": -75.96777141,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4120,
@@ -21949,7 +21949,7 @@
     "name": "point o' rocks",
     "latitude": 27.24606437,
     "longitude": -82.53618479,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4137,
@@ -22229,7 +22229,7 @@
     "name": "Carpet Muncher",
     "latitude": 29.25027243,
     "longitude": -81.01736784,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4184,
@@ -22237,7 +22237,7 @@
     "name": "Dauphin Island Pier",
     "latitude": 30.25007308,
     "longitude": -88.07543457,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4185,
@@ -22413,7 +22413,7 @@
     "name": "Wrightsville beach",
     "latitude": 34.21441059,
     "longitude": -77.79086351,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4222,
@@ -22509,7 +22509,7 @@
     "name": "Myrtle Beach  (42st - 46 st)",
     "latitude": 33.71581742,
     "longitude": -78.8501215,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4242,
@@ -22661,7 +22661,7 @@
     "name": "Destin",
     "latitude": 30.38590724,
     "longitude": -86.43287659,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4270,
@@ -22677,7 +22677,7 @@
     "name": "Sunset Beach",
     "latitude": 33.86727982,
     "longitude": -78.50667,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4274,
@@ -22797,7 +22797,7 @@
     "name": "Jamaica Beach",
     "latitude": 29.17674471,
     "longitude": -94.97062683,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4295,
@@ -23053,7 +23053,7 @@
     "name": "Surfside Pier",
     "latitude": 33.60861492,
     "longitude": -78.97762299,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4346,
@@ -23285,7 +23285,7 @@
     "name": "Haulover Inlet North Side",
     "latitude": 25.90119404,
     "longitude": -80.12143493,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4397,
@@ -23413,7 +23413,7 @@
     "name": "Marconi Beach",
     "latitude": 41.9054631,
     "longitude": -69.966892,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4423,
@@ -23813,7 +23813,7 @@
     "name": "Clearwater Pass",
     "latitude": 27.9710941,
     "longitude": -82.83141553,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4498,
@@ -23893,7 +23893,7 @@
     "name": "Rexhame",
     "latitude": 42.11895232,
     "longitude": -70.67152508,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4512,
@@ -23957,7 +23957,7 @@
     "name": "1st beach",
     "latitude": 41.48721845,
     "longitude": -71.29152775,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4524,
@@ -24253,7 +24253,7 @@
     "name": "Waverly",
     "latitude": 39.29175054,
     "longitude": -74.55183864,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4582,
@@ -24333,7 +24333,7 @@
     "name": "Lido Beach",
     "latitude": 27.30954852,
     "longitude": -82.57636428,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4596,
@@ -24405,7 +24405,7 @@
     "name": "Daytona Beach",
     "latitude": 29.17224818,
     "longitude": -80.97919464,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4609,
@@ -24501,7 +24501,7 @@
     "name": "St Augustine Pier",
     "latitude": 29.85757998,
     "longitude": -81.26488209,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4632,
@@ -24525,7 +24525,7 @@
     "name": "Patricks Air Force Base",
     "latitude": 28.25874384,
     "longitude": -80.6038329,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4638,
@@ -24661,7 +24661,7 @@
     "name": "57th Street",
     "latitude": 39.2215568,
     "longitude": -74.63570595,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4667,
@@ -24765,7 +24765,7 @@
     "name": "Anclote Island",
     "latitude": 28.20367537,
     "longitude": -82.82524109,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4687,
@@ -24925,7 +24925,7 @@
     "name": "Deerfield Beach Pier",
     "latitude": 26.31649783,
     "longitude": -80.07411003,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4725,
@@ -24933,7 +24933,7 @@
     "name": "Nauset Light Beach",
     "latitude": 41.79924742,
     "longitude": -69.94231224,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4726,
@@ -24997,7 +24997,7 @@
     "name": "Lavallette",
     "latitude": 39.96833279,
     "longitude": -74.06529933,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4740,
@@ -25045,7 +25045,7 @@
     "name": "Strathmere, 7th street",
     "latitude": 39.19813883,
     "longitude": -74.65583324,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4749,
@@ -25117,7 +25117,7 @@
     "name": "Bailey's Beach",
     "latitude": 41.45568963,
     "longitude": -71.31197691,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4763,
@@ -25173,7 +25173,7 @@
     "name": "TWO LIGHTS",
     "latitude": 43.55979139,
     "longitude": -70.20628452,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4774,
@@ -25301,7 +25301,7 @@
     "name": "Deveraux Beach",
     "latitude": 42.48964694,
     "longitude": -70.85036337,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4794,
@@ -25365,7 +25365,7 @@
     "name": "Sea Island",
     "latitude": 31.17755974,
     "longitude": -81.34878159,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4806,
@@ -25565,7 +25565,7 @@
     "name": "Grand Isle",
     "latitude": 29.21780388,
     "longitude": -89.99622345,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4844,
@@ -26005,7 +26005,7 @@
     "name": "Middlesex ",
     "latitude": 39.69730603,
     "longitude": -74.13636714,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4935,
@@ -26013,7 +26013,7 @@
     "name": "Spuds",
     "latitude": 30.2731985,
     "longitude": -87.54743099,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 4936,
@@ -26549,7 +26549,7 @@
     "name": "Whitecrest Beach",
     "latitude": 41.9342103,
     "longitude": -69.97870445,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5050,
@@ -26621,7 +26621,7 @@
     "name": "Ocean Lakes ",
     "latitude": 33.62402708,
     "longitude": -78.95414829,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5059,
@@ -26653,7 +26653,7 @@
     "name": "St Augustine A-Street",
     "latitude": 29.84462693,
     "longitude": -81.26473188,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5064,
@@ -26661,7 +26661,7 @@
     "name": "Commercial Pier",
     "latitude": 26.18894632,
     "longitude": -80.09418368,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5065,
@@ -26829,7 +26829,7 @@
     "name": "Mason's Inlet",
     "latitude": 34.19128674,
     "longitude": -77.80929565,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5099,
@@ -26845,7 +26845,7 @@
     "name": "Fernandina Pier",
     "latitude": 30.66744718,
     "longitude": -81.42585754,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5101,
@@ -26941,7 +26941,7 @@
     "name": "The Cove, Cape May",
     "latitude": 38.92863441,
     "longitude": -74.93467569,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5123,
@@ -27069,7 +27069,7 @@
     "name": "S-Turns",
     "latitude": 35.60784036,
     "longitude": -75.4649055,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5146,
@@ -27093,7 +27093,7 @@
     "name": "Lincoln",
     "latitude": 40.58170914,
     "longitude": -73.65299821,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5154,
@@ -27213,7 +27213,7 @@
     "name": "Normandy Beach - 7th Street",
     "latitude": 40.01266398,
     "longitude": -74.05602157,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5175,
@@ -27301,7 +27301,7 @@
     "name": "Madaquecham (Nantucket Island)",
     "latitude": 41.24464327,
     "longitude": -70.06687403,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5194,
@@ -27317,7 +27317,7 @@
     "name": "Belmar - 16 th Street",
     "latitude": 40.1720898,
     "longitude": -74.01543975,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5196,
@@ -27341,7 +27341,7 @@
     "name": "Elbow Ledge",
     "latitude": 41.46061049,
     "longitude": -71.26041412,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5202,
@@ -27381,7 +27381,7 @@
     "name": "Dunes Motel",
     "latitude": 25.93406114,
     "longitude": -80.11877418,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5211,
@@ -27421,7 +27421,7 @@
     "name": "Cocoa Beach Pier",
     "latitude": 28.36763189,
     "longitude": -80.60127139,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5217,
@@ -27453,7 +27453,7 @@
     "name": "Fenwick Island",
     "latitude": 38.46104919,
     "longitude": -75.04868031,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5222,
@@ -27493,7 +27493,7 @@
     "name": "Clearwater",
     "latitude": 27.98758028,
     "longitude": -82.82798767,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5228,
@@ -27677,7 +27677,7 @@
     "name": "Ventnor Pier",
     "latitude": 39.33574133,
     "longitude": -74.47686553,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5262,
@@ -27821,7 +27821,7 @@
     "name": "Ditch Plains",
     "latitude": 41.03875605,
     "longitude": -71.91377878,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5288,
@@ -27837,7 +27837,7 @@
     "name": "Allenhurst",
     "latitude": 40.2363277,
     "longitude": -73.99491549,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5291,
@@ -27845,7 +27845,7 @@
     "name": "Perkins",
     "latitude": 28.20078918,
     "longitude": -80.59558243,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5292,
@@ -27885,7 +27885,7 @@
     "name": "Little Talbot",
     "latitude": 30.4779336,
     "longitude": -81.41130924,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5301,
@@ -28309,7 +28309,7 @@
     "name": "Wiggins Pass",
     "latitude": 26.28769168,
     "longitude": -81.8313539,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5375,
@@ -28605,7 +28605,7 @@
     "name": "Bethune",
     "latitude": 28.95080895,
     "longitude": -80.83869785,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5435,
@@ -28733,7 +28733,7 @@
     "name": "Bradenton- twin piers",
     "latitude": 27.459903,
     "longitude": -82.69705832,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5460,
@@ -28797,7 +28797,7 @@
     "name": "Terry's Cove",
     "latitude": 30.2688574,
     "longitude": -87.57958531,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5471,
@@ -29133,7 +29133,7 @@
     "name": "Bicentenial Park",
     "latitude": 29.33916175,
     "longitude": -81.06213927,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5537,
@@ -29325,7 +29325,7 @@
     "name": "Ocean City - 8th Street",
     "latitude": 39.27469,
     "longitude": -74.56829667,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5578,
@@ -29445,7 +29445,7 @@
     "name": "Fort Fisher",
     "latitude": 33.97140981,
     "longitude": -77.9159832,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5596,
@@ -30077,7 +30077,7 @@
     "name": "Horseneck Beach",
     "latitude": 41.49933391,
     "longitude": -71.05257511,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5725,
@@ -30293,7 +30293,7 @@
     "name": "2nd Avenue Pier",
     "latitude": 33.68349661,
     "longitude": -78.8856554,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5765,
@@ -30317,7 +30317,7 @@
     "name": "Edisto Beach",
     "latitude": 32.50512923,
     "longitude": -80.29330015,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5768,
@@ -30573,7 +30573,7 @@
     "name": "Sand Island",
     "latitude": 30.22940803,
     "longitude": -88.11841965,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5818,
@@ -30661,7 +30661,7 @@
     "name": "Long Beach",
     "latitude": 42.6294121,
     "longitude": -70.61771393,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5836,
@@ -30685,7 +30685,7 @@
     "name": "Robert Moses",
     "latitude": 40.62515819,
     "longitude": -73.26662064,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5840,
@@ -30789,7 +30789,7 @@
     "name": "Fishermans Island",
     "latitude": 37.08803174,
     "longitude": -75.97898841,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5857,
@@ -30885,7 +30885,7 @@
     "name": "Bonnet Shores Point",
     "latitude": 41.48202633,
     "longitude": -71.41817093,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5873,
@@ -30925,7 +30925,7 @@
     "name": "Chicahauk",
     "latitude": 36.11504882,
     "longitude": -75.71758032,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5878,
@@ -30981,7 +30981,7 @@
     "name": "Boardwalk",
     "latitude": 28.09212348,
     "longitude": -80.56523323,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5887,
@@ -30997,7 +30997,7 @@
     "name": "Lighthouse",
     "latitude": 29.78148701,
     "longitude": -81.25537097,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5889,
@@ -31029,7 +31029,7 @@
     "name": "Poverty Beach",
     "latitude": 38.93223991,
     "longitude": -74.94409561,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5896,
@@ -31077,7 +31077,7 @@
     "name": "Crystals",
     "latitude": 39.36283788,
     "longitude": -74.40799713,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5903,
@@ -31093,7 +31093,7 @@
     "name": "Myrtle Beach 38th to 41st",
     "latitude": 33.71480897,
     "longitude": -78.85218143,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5908,
@@ -31109,7 +31109,7 @@
     "name": "North Wildwood",
     "latitude": 38.99553995,
     "longitude": -74.79254007,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5911,
@@ -31285,7 +31285,7 @@
     "name": "Atlantic Beach",
     "latitude": 34.70055556,
     "longitude": -76.74083333,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5941,
@@ -31293,7 +31293,7 @@
     "name": "Outer Banks Beach Club",
     "latitude": 35.3532161,
     "longitude": -75.54199219,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 5942,
@@ -31613,7 +31613,7 @@
     "name": "Naples Pier",
     "latitude": 26.14341884,
     "longitude": -81.79836273,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6006,
@@ -31669,7 +31669,7 @@
     "name": "Chandeleur Islands",
     "latitude": 29.84764201,
     "longitude": -88.83544922,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6019,
@@ -31965,7 +31965,7 @@
     "name": "Pump House",
     "latitude": 26.77434973,
     "longitude": -80.02913475,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6080,
@@ -32221,7 +32221,7 @@
     "name": "Brick Beach 2",
     "latitude": 40.01473963,
     "longitude": -74.05486286,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6134,
@@ -32365,7 +32365,7 @@
     "name": "Shackleford Banks",
     "latitude": 34.66794671,
     "longitude": -76.59479141,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6158,
@@ -32413,7 +32413,7 @@
     "name": "Seaside Park",
     "latitude": 39.91296011,
     "longitude": -74.07632589,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6165,
@@ -32421,7 +32421,7 @@
     "name": "Redington Breakwater",
     "latitude": 27.81004166,
     "longitude": -82.81172276,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6166,
@@ -32437,7 +32437,7 @@
     "name": "Naval Jetty",
     "latitude": 38.76729528,
     "longitude": -75.08166879,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6169,
@@ -32453,7 +32453,7 @@
     "name": "Honeymoon island",
     "latitude": 28.12422358,
     "longitude": -82.82524109,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6172,
@@ -32685,7 +32685,7 @@
     "name": "south point boardwalk",
     "latitude": 25.76294795,
     "longitude": -80.13281822,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6216,
@@ -32877,7 +32877,7 @@
     "name": "Surfside beach - Octagone",
     "latitude": 28.93981019,
     "longitude": -95.2930069,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6262,
@@ -32941,7 +32941,7 @@
     "name": "Folly Beach Pier",
     "latitude": 32.65404579,
     "longitude": -79.93901253,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6275,
@@ -33021,7 +33021,7 @@
     "name": "Fish Pass Jetties",
     "latitude": 27.67628833,
     "longitude": -97.16460943,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6295,
@@ -33053,7 +33053,7 @@
     "name": "east beach lighthouse",
     "latitude": 41.3060851,
     "longitude": -71.85500622,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6299,
@@ -33117,7 +33117,7 @@
     "name": "Pensacola beach",
     "latitude": 30.33191658,
     "longitude": -87.13926315,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6308,
@@ -33365,7 +33365,7 @@
     "name": "Dondanville Road",
     "latitude": 29.81689133,
     "longitude": -81.26226425,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6355,
@@ -33373,7 +33373,7 @@
     "name": "58th Street",
     "latitude": 39.62155714,
     "longitude": -74.19307709,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6357,
@@ -33493,7 +33493,7 @@
     "name": "North St.",
     "latitude": 39.28327726,
     "longitude": -74.5564574,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6376,
@@ -33581,7 +33581,7 @@
     "name": "Bay Head",
     "latitude": 40.07698778,
     "longitude": -74.03950453,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6389,
@@ -33725,7 +33725,7 @@
     "name": "South Beach",
     "latitude": 25.76947955,
     "longitude": -80.13020039,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6415,
@@ -33733,7 +33733,7 @@
     "name": "Sakonnet River Break",
     "latitude": 41.47167301,
     "longitude": -71.2471962,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6416,
@@ -33893,7 +33893,7 @@
     "name": "Sandy Hook The Cove",
     "latitude": 40.41767629,
     "longitude": -73.97926748,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6446,
@@ -33941,7 +33941,7 @@
     "name": "St Phillip's",
     "latitude": 39.11749211,
     "longitude": -74.70964909,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6455,
@@ -33997,7 +33997,7 @@
     "name": "Springmaid Pier",
     "latitude": 33.6420625,
     "longitude": -78.8873291,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6469,
@@ -34005,7 +34005,7 @@
     "name": "13th Street",
     "latitude": 28.29555765,
     "longitude": -80.60898542,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6472,
@@ -34013,7 +34013,7 @@
     "name": "St. Simons Island, GA ",
     "latitude": 31.14403123,
     "longitude": -81.37000322,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6473,
@@ -34053,7 +34053,7 @@
     "name": "Boynton - tortuga beach",
     "latitude": 26.54528754,
     "longitude": -80.04237413,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6481,
@@ -34309,7 +34309,7 @@
     "name": "Smith point",
     "latitude": 40.73555143,
     "longitude": -72.85446167,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6533,
@@ -34405,7 +34405,7 @@
     "name": "Crescent Beach",
     "latitude": 29.7711598,
     "longitude": -81.24973297,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6551,
@@ -34629,7 +34629,7 @@
     "name": "apache pier",
     "latitude": 33.76245183,
     "longitude": -78.78128529,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6595,
@@ -34637,7 +34637,7 @@
     "name": "Stone Harbor 110",
     "latitude": 39.04288619,
     "longitude": -74.76329327,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6596,
@@ -34717,7 +34717,7 @@
     "name": "Gilgo",
     "latitude": 40.61681921,
     "longitude": -73.39742661,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6606,
@@ -34733,7 +34733,7 @@
     "name": "Lori Wilson Park",
     "latitude": 28.33515165,
     "longitude": -80.60697913,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6609,
@@ -34781,7 +34781,7 @@
     "name": "Onslow Beach",
     "latitude": 34.56085937,
     "longitude": -77.28435516,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6616,
@@ -34925,7 +34925,7 @@
     "name": "48th st. Myrtle Beach",
     "latitude": 33.72065869,
     "longitude": -78.84473026,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6644,
@@ -34933,7 +34933,7 @@
     "name": "Dickeys",
     "latitude": 41.32392626,
     "longitude": -71.79567844,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6645,
@@ -35213,7 +35213,7 @@
     "name": "Block Island",
     "latitude": 41.14556973,
     "longitude": -71.58622742,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6705,
@@ -35237,7 +35237,7 @@
     "name": "Bob Hall Pier",
     "latitude": 27.58229905,
     "longitude": -97.21823215,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6709,
@@ -35317,7 +35317,7 @@
     "name": "Bird Island",
     "latitude": 33.85730174,
     "longitude": -78.52907181,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6724,
@@ -35357,7 +35357,7 @@
     "name": "Satellite Beach",
     "latitude": 28.17341498,
     "longitude": -80.58729172,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6731,
@@ -35493,7 +35493,7 @@
     "name": "Hooks",
     "latitude": 30.6806151,
     "longitude": -81.42843783,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6755,
@@ -35741,7 +35741,7 @@
     "name": "Spanish house",
     "latitude": 27.87612641,
     "longitude": -80.45557112,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6796,
@@ -35893,7 +35893,7 @@
     "name": "Bellair Beach",
     "latitude": 27.92435062,
     "longitude": -82.84253597,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6826,
@@ -36077,7 +36077,7 @@
     "name": "Coast Guard House",
     "latitude": 41.43058002,
     "longitude": -71.45460203,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6857,
@@ -36205,7 +36205,7 @@
     "name": "Anna Maria Island",
     "latitude": 27.53867996,
     "longitude": -82.74434566,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6883,
@@ -36213,7 +36213,7 @@
     "name": "Harvey Cedars - 7 E. Cape May Street",
     "latitude": 39.70513966,
     "longitude": -74.14883137,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6884,
@@ -36293,7 +36293,7 @@
     "name": "Trayhan's",
     "latitude": 43.7498932,
     "longitude": -69.98479843,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6901,
@@ -36365,7 +36365,7 @@
     "name": "Juno Pier",
     "latitude": 26.88808609,
     "longitude": -80.05436897,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6914,
@@ -36389,7 +36389,7 @@
     "name": "Ocean Lane, Deal",
     "latitude": 40.25418009,
     "longitude": -73.98987293,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6920,
@@ -36517,7 +36517,7 @@
     "name": "Ogunquit Beach",
     "latitude": 43.25870587,
     "longitude": -70.58973312,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6943,
@@ -36605,7 +36605,7 @@
     "name": "Horace Caldwell Pier",
     "latitude": 27.82753916,
     "longitude": -97.05266476,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 6957,
@@ -37245,7 +37245,7 @@
     "name": "Jupiter Inlet North South Side",
     "latitude": 26.94378283,
     "longitude": -80.06951809,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7079,
@@ -37349,7 +37349,7 @@
     "name": "Wildwood 2nd Street",
     "latitude": 39.00157669,
     "longitude": -74.78711128,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7097,
@@ -37549,7 +37549,7 @@
     "name": "Madaket",
     "latitude": 41.27471023,
     "longitude": -70.21448135,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7133,
@@ -37613,7 +37613,7 @@
     "name": "Plum Island",
     "latitude": 42.79968323,
     "longitude": -70.80722809,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7143,
@@ -37637,7 +37637,7 @@
     "name": "West Pass",
     "latitude": 30.23989171,
     "longitude": -87.7376318,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7147,
@@ -37653,7 +37653,7 @@
     "name": "Port Aransas",
     "latitude": 27.81782289,
     "longitude": -97.05871582,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7151,
@@ -37669,7 +37669,7 @@
     "name": "New Smyrna Inlet",
     "latitude": 29.06427245,
     "longitude": -80.90641022,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7153,
@@ -37725,7 +37725,7 @@
     "name": "Nuns beach",
     "latitude": 39.04298619,
     "longitude": -74.76346493,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7161,
@@ -37845,7 +37845,7 @@
     "name": "Pelican poles",
     "latitude": 33.34630812,
     "longitude": -79.15363491,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7182,
@@ -37885,7 +37885,7 @@
     "name": "Sunset Beach",
     "latitude": 27.74388818,
     "longitude": -82.76005536,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7190,
@@ -37893,7 +37893,7 @@
     "name": "Avalon - 30th Street",
     "latitude": 39.09266554,
     "longitude": -74.7185111,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7192,
@@ -38013,7 +38013,7 @@
     "name": "Bethany Hollywood St",
     "latitude": 38.53749146,
     "longitude": -75.05332589,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7216,
@@ -38253,7 +38253,7 @@
     "name": "St. Joe's Island",
     "latitude": 27.84114426,
     "longitude": -97.04097033,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7262,
@@ -38309,7 +38309,7 @@
     "name": "South Padre Island",
     "latitude": 26.0937883,
     "longitude": -97.16583252,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7273,
@@ -38493,7 +38493,7 @@
     "name": "Harbor House",
     "latitude": 25.89909611,
     "longitude": -80.12105539,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7305,
@@ -38613,7 +38613,7 @@
     "name": "Wedge",
     "latitude": 38.31508022,
     "longitude": -75.0984326,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7329,
@@ -38637,7 +38637,7 @@
     "name": "Matunuck",
     "latitude": 41.37250936,
     "longitude": -71.53637052,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7336,
@@ -38693,7 +38693,7 @@
     "name": "Galveston - Flagship",
     "latitude": 29.28701181,
     "longitude": -94.79130507,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7350,
@@ -38709,7 +38709,7 @@
     "name": "Berts Bar",
     "latitude": 32.75773948,
     "longitude": -79.83620882,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7352,
@@ -38805,7 +38805,7 @@
     "name": "Ocean Isle",
     "latitude": 33.88751749,
     "longitude": -78.43631029,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7367,
@@ -39253,7 +39253,7 @@
     "name": "Frisco Pier",
     "latitude": 35.22488535,
     "longitude": -75.63610554,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7460,
@@ -39693,7 +39693,7 @@
     "name": "13th ave south surfside",
     "latitude": 33.59517506,
     "longitude": -78.98088455,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7546,
@@ -40045,7 +40045,7 @@
     "name": "TwentySevens",
     "latitude": 39.31162166,
     "longitude": -74.52275813,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7610,
@@ -40165,7 +40165,7 @@
     "name": "The Barge",
     "latitude": 30.37613336,
     "longitude": -81.394701,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7633,
@@ -40485,7 +40485,7 @@
     "name": "Boiler",
     "latitude": 35.71654368,
     "longitude": -75.49214065,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7707,
@@ -40797,7 +40797,7 @@
     "name": "Jenness Beach, NH",
     "latitude": 42.98484068,
     "longitude": -70.7623601,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7756,
@@ -40805,7 +40805,7 @@
     "name": "Ballston Beach",
     "latitude": 42.00082745,
     "longitude": -70.02114773,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7758,
@@ -40845,7 +40845,7 @@
     "name": "North Litchfield",
     "latitude": 33.48647124,
     "longitude": -79.08122063,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7763,
@@ -41021,7 +41021,7 @@
     "name": "Castles",
     "latitude": 39.41297112,
     "longitude": -74.35256124,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7800,
@@ -41141,7 +41141,7 @@
     "name": "Napatree Jetty",
     "latitude": 41.30988099,
     "longitude": -71.86318159,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7830,
@@ -41181,7 +41181,7 @@
     "name": "Lido",
     "latitude": 40.59127459,
     "longitude": -73.60719681,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7840,
@@ -41229,7 +41229,7 @@
     "name": "Ponce Inlet",
     "latitude": 29.07899925,
     "longitude": -80.91842115,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7847,
@@ -41365,7 +41365,7 @@
     "name": "Galveston - Stewart Beach",
     "latitude": 29.30612267,
     "longitude": -94.77128506,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7875,
@@ -41965,7 +41965,7 @@
     "name": "Naragansett",
     "latitude": 41.43757896,
     "longitude": -71.45070076,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 7985,
@@ -42341,7 +42341,7 @@
     "name": "Garden City Pier",
     "latitude": 33.576084,
     "longitude": -78.99762154,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8057,
@@ -42429,7 +42429,7 @@
     "name": "Trestles",
     "latitude": 38.93931684,
     "longitude": -74.8621273,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8072,
@@ -42477,7 +42477,7 @@
     "name": "Tybee pier",
     "latitude": 31.99169852,
     "longitude": -80.84577084,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8080,
@@ -42909,7 +42909,7 @@
     "name": "Trailor Park",
     "latitude": 41.03907975,
     "longitude": -71.91052794,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8174,
@@ -42965,7 +42965,7 @@
     "name": "Higgins Beach",
     "latitude": 43.55990801,
     "longitude": -70.27784586,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8182,
@@ -43045,7 +43045,7 @@
     "name": "Outside Ponquogue",
     "latitude": 40.83089148,
     "longitude": -72.4825573,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8200,
@@ -43317,7 +43317,7 @@
     "name": "Vilano Beach",
     "latitude": 29.91960476,
     "longitude": -81.29101753,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8262,
@@ -43325,7 +43325,7 @@
     "name": "Bolivar",
     "latitude": 29.51991957,
     "longitude": -94.46551323,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8263,
@@ -43357,7 +43357,7 @@
     "name": "Navarre Beach Pier",
     "latitude": 30.37836404,
     "longitude": -86.86176181,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8271,
@@ -43461,7 +43461,7 @@
     "name": "Point Judith",
     "latitude": 41.36051193,
     "longitude": -71.48048401,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8291,
@@ -43661,7 +43661,7 @@
     "name": "North Bar",
     "latitude": 41.25096751,
     "longitude": -71.87530518,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8334,
@@ -43693,7 +43693,7 @@
     "name": "The Back Porch",
     "latitude": 30.38224215,
     "longitude": -86.45729542,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8338,
@@ -43701,7 +43701,7 @@
     "name": "Peg Leg's",
     "latitude": 28.16494053,
     "longitude": -80.58651924,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8339,
@@ -43749,7 +43749,7 @@
     "name": "Blowhole",
     "latitude": 29.87495974,
     "longitude": -81.26728535,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8346,
@@ -43757,7 +43757,7 @@
     "name": "Seaside Park, NJ",
     "latitude": 39.91267209,
     "longitude": -74.07620519,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8347,
@@ -43821,7 +43821,7 @@
     "name": "Upham Beach",
     "latitude": 27.73554139,
     "longitude": -82.75121212,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8356,
@@ -43829,7 +43829,7 @@
     "name": "81st Street",
     "latitude": 36.90679489,
     "longitude": -75.9891808,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8357,
@@ -43861,7 +43861,7 @@
     "name": "Cutty wow Reef",
     "latitude": 41.49366381,
     "longitude": -71.13269806,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8364,
@@ -43949,7 +43949,7 @@
     "name": "Ocean City - 14th 15th St",
     "latitude": 39.27011357,
     "longitude": -74.58020568,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8380,
@@ -43973,7 +43973,7 @@
     "name": "The Wall",
     "latitude": 42.97382039,
     "longitude": -70.76444149,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8387,
@@ -43981,7 +43981,7 @@
     "name": "Bradley Beach",
     "latitude": 40.19792092,
     "longitude": -74.00605202,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8388,
@@ -44117,7 +44117,7 @@
     "name": "Grand Blvd",
     "latitude": 40.58540838,
     "longitude": -73.68427277,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8417,
@@ -44213,7 +44213,7 @@
     "name": "Long Point",
     "latitude": 27.88297355,
     "longitude": -80.45893192,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8432,
@@ -44293,7 +44293,7 @@
     "name": "Kitty Hawk Pier",
     "latitude": 36.10168296,
     "longitude": -75.71116447,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8447,
@@ -45053,7 +45053,7 @@
     "name": "Jetty 4",
     "latitude": 40.78787197,
     "longitude": -72.66282991,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8593,
@@ -45245,7 +45245,7 @@
     "name": "The North End",
     "latitude": 36.90419114,
     "longitude": -75.9885639,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8633,
@@ -45277,7 +45277,7 @@
     "name": "Canova Beach",
     "latitude": 28.13869009,
     "longitude": -80.57970241,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8640,
@@ -45445,7 +45445,7 @@
     "name": "Isle of Palms Pier",
     "latitude": 32.78669727,
     "longitude": -79.777565,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8671,
@@ -45573,7 +45573,7 @@
     "name": "Pensacola Beach Pier",
     "latitude": 30.33117576,
     "longitude": -87.1410656,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8697,
@@ -45613,7 +45613,7 @@
     "name": "Hangers",
     "latitude": 28.24270572,
     "longitude": -80.60142159,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8703,
@@ -45669,7 +45669,7 @@
     "name": "Ocean Avenue",
     "latitude": 28.06838291,
     "longitude": -80.55692911,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8713,
@@ -45725,7 +45725,7 @@
     "name": "Grandview",
     "latitude": 37.0870903,
     "longitude": -76.27003491,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8725,
@@ -46029,7 +46029,7 @@
     "name": "Shit Pipe",
     "latitude": 34.01209547,
     "longitude": -77.89881438,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8777,
@@ -46069,7 +46069,7 @@
     "name": "The Shoals",
     "latitude": 30.43187577,
     "longitude": -81.40049458,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8784,
@@ -46165,7 +46165,7 @@
     "name": "Hess",
     "latitude": 28.15842818,
     "longitude": -80.58483481,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8803,
@@ -46357,7 +46357,7 @@
     "name": "Ocean City - 7th Street",
     "latitude": 39.27543748,
     "longitude": -74.56620455,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8842,
@@ -46413,7 +46413,7 @@
     "name": "Tables",
     "latitude": 28.26677617,
     "longitude": -80.60507208,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8852,
@@ -46437,7 +46437,7 @@
     "name": "Quintanas",
     "latitude": 28.93320005,
     "longitude": -95.30210495,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8856,
@@ -46485,7 +46485,7 @@
     "name": "2nd Beach",
     "latitude": 41.48774889,
     "longitude": -71.25841856,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8864,
@@ -46645,7 +46645,7 @@
     "name": "Out Front",
     "latitude": 37.88896114,
     "longitude": -75.34057975,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8884,
@@ -46717,7 +46717,7 @@
     "name": "Connecticut Street Jetty",
     "latitude": 40.58232841,
     "longitude": -73.69965792,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8899,
@@ -46789,7 +46789,7 @@
     "name": "Lido West",
     "latitude": 40.58790158,
     "longitude": -73.61689568,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8912,
@@ -46821,7 +46821,7 @@
     "name": "Asbury Park",
     "latitude": 40.22813695,
     "longitude": -73.99530172,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8917,
@@ -46901,7 +46901,7 @@
     "name": "Beach Club",
     "latitude": 28.97676853,
     "longitude": -80.85566282,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8937,
@@ -46973,7 +46973,7 @@
     "name": "Fort Pierce North Jetty",
     "latitude": 27.4745039,
     "longitude": -80.29067159,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8947,
@@ -47029,7 +47029,7 @@
     "name": "Sebastian Inlet",
     "latitude": 27.86296201,
     "longitude": -80.44650793,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8959,
@@ -47037,7 +47037,7 @@
     "name": "Bald Head Island- Point",
     "latitude": 33.85131433,
     "longitude": -77.98885345,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8961,
@@ -47141,7 +47141,7 @@
     "name": "Misquamicut State Beach",
     "latitude": 41.3238618,
     "longitude": -71.79627657,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 8982,
@@ -47389,7 +47389,7 @@
     "name": "Beacon point",
     "latitude": 29.91670345,
     "longitude": -81.28835678,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 9028,
@@ -47885,7 +47885,7 @@
     "name": "South Ponte Vedra Beach",
     "latitude": 30.02273255,
     "longitude": -81.32157326,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 9133,
@@ -48157,7 +48157,7 @@
     "name": "The Dunes Club, Myrtle Beach",
     "latitude": 33.75503948,
     "longitude": -78.79478216,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 9192,
@@ -48189,7 +48189,7 @@
     "name": "playa bagdad",
     "latitude": 25.83419634,
     "longitude": -97.15484619,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 9199,
@@ -48245,7 +48245,7 @@
     "name": "Virginia Beach",
     "latitude": 36.86121863,
     "longitude": -75.97560883,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 9210,
@@ -48381,7 +48381,7 @@
     "name": "Alabama Point",
     "latitude": 30.27090984,
     "longitude": -87.55939901,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 9231,
@@ -48389,7 +48389,7 @@
     "name": "Jax Beach Pier",
     "latitude": 30.29335873,
     "longitude": -81.38894498,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 9232,
@@ -48445,7 +48445,7 @@
     "name": "Playalinda Beach",
     "latitude": 28.74147323,
     "longitude": -80.69509506,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 9240,
@@ -48765,7 +48765,7 @@
     "name": "Clearwater beach - The Waffle House",
     "latitude": 27.98119455,
     "longitude": -82.8290391,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 9313,
@@ -49013,7 +49013,7 @@
     "name": "Baker's beach",
     "latitude": 41.50823021,
     "longitude": -71.06903315,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 9366,
@@ -49069,7 +49069,7 @@
     "name": "Popham - Read",
     "latitude": 43.73389477,
     "longitude": -69.79545593,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 9375,
@@ -49269,7 +49269,7 @@
     "name": "Mansfield Jetty",
     "latitude": 26.56549876,
     "longitude": -97.27638245,
-    "visible": false
+    "visible": true
   },
   {
     "spot-id": 9412,
